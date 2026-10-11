@@ -35,23 +35,33 @@
       1.2,
       1.6
     ],
-    "hurt_invulnerability": 0.85,
+    "hurt_invulnerability": 1.1,
     "hurt_seconds": 0.22,
     "knockback_x": 290,
     "knockback_y": 230,
     "energy_regen": 14,
-    "contact_damage": 12,
+    "contact_damage": 1,
     "hitstop": 0.045,
     "effect_budget": 32,
-    "enemy_damage": 14,
+    "enemy_damage": 1,
     "enemy_speed": 88,
     "enemy_hp": 70,
-    "boss_hp": 280,
+    "boss_hp": 340,
     "enemy_attack_interval": 1.5,
     "enemy_attack_range": 90,
     "boss_projectile_speed": 270,
     "boss_attack_interval": 1.8,
-    "projectile_radius": 14
+    "projectile_radius": 14,
+    "masks": 5,
+    "energy_on_hit": 11,
+    "focus_cost": 33,
+    "focus_seconds": 0.85,
+    "pogo_speed": 540,
+    "recoil_x": 260,
+    "recoil_seconds": 0.08,
+    "hitstop_heavy": 0.09,
+    "hazard_damage": 1,
+    "hazard_respawn_seconds": 0.5
   },
   "visual": {
     "sprite_height": 108,
@@ -132,9 +142,7 @@
       "Right"
     ],
     "jump": [
-      "Space",
-      "W",
-      "Up"
+      "Space"
     ],
     "dash": [
       "Shift"
@@ -155,6 +163,17 @@
     ],
     "pause": [
       "Escape"
+    ],
+    "up": [
+      "W",
+      "Up"
+    ],
+    "down": [
+      "S",
+      "Down"
+    ],
+    "focus": [
+      "F"
     ]
   }
 }

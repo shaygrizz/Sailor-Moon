@@ -7,6 +7,8 @@ var age: float = 0
 var hits: Dictionary = {}
 var hostile: bool = false
 var previous: Vector2
+## Hostile shots may travel along any vector; player spells only move horizontally.
+var velocity_value: Vector2 = Vector2.ZERO
 var pixel_heart: Texture2D
 var pixel_effect: Texture2D
 
@@ -29,6 +31,12 @@ func _physics_process(delta: float) -> void:
 	var travel = age
 	if skill.effect == "boomerang":
 		travel = sin(age / skill.lifetime * PI) * skill.lifetime / PI
+	if velocity_value != Vector2.ZERO:
+		position = origin + velocity_value * age
+		if skill.effect == "shockwave": position.y = origin.y
+		queue_redraw()
+		if age >= skill.lifetime: queue_free()
+		return
 	position.x = origin.x + direction * skill.speed * travel
 	if skill.effect in ["hearts", "wave"]: position.y = origin.y + sin(age * 9) * 12
 	if skill.effect == "ground": position.y = origin.y + 32
@@ -82,6 +90,12 @@ func _draw() -> void:
 	elif kind == "ice":
 		draw_colored_polygon(PackedVector2Array([Vector2(-26, 0), Vector2(0, -20), Vector2(34, 0), Vector2(0, 20)]), color)
 		draw_line(Vector2(-20, 0), Vector2(26, 0), Color.WHITE, 2)
+	elif kind == "shockwave":
+		for i in range(3):
+			var height = 46 - i * 12 + sin(age * 30 + i) * 4
+			var back = -signf(velocity_value.x) * i * 16
+			draw_colored_polygon(PackedVector2Array([Vector2(back - 14, 0), Vector2(back, -height), Vector2(back + 14, 0)]), Color(color, fade * (1 - i * 0.3)))
+		draw_line(Vector2(-30, 0), Vector2(30, 0), Color(1, 1, 1, fade), 3)
 	else:
 		draw_circle(Vector2.ZERO, 23, Color(color, fade * 0.22))
 		draw_circle(Vector2.ZERO, 15, color)

@@ -26,7 +26,7 @@ func configure(defaults: Dictionary, override_directory: String = "") -> void:
 		var player = AudioStreamPlayer.new()
 		add_child(player)
 		players.append(player)
-	for i in range(4):
+	for i in range(10):
 		var player = AudioStreamPlayer.new()
 		add_child(player)
 		sfx_players.append(player)
@@ -88,6 +88,7 @@ func play_sfx(id: String) -> void:
 		player.stream = resolve_stream(catalog.sfx[id])
 		if player.stream == null: return
 		player.volume_db = linear_to_db(maxf(0.0001, master_volume * sfx_volume)) + catalog.sfx[id].get("gain_db", 0)
+		player.pitch_scale = randf_range(0.93, 1.07) if id in ["slash", "attack", "hit", "jump", "pogo", "kill"] else 1.0
 		player.play()
 		return
 

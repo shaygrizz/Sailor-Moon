@@ -100,6 +100,7 @@ func _finish_start() -> void:
 	selected = pending.actor
 	level = Level.new()
 	add_child(level)
+	level.translator = ui.tx
 	level.setup(db, mode, selected, pending.snapshot)
 	level.checkpoint_reached.connect(_checkpoint)
 	level.player_defeated.connect(_defeated)
@@ -215,12 +216,20 @@ func _checkpoint(position_value: Vector2) -> void:
 	checkpoint = level.snapshot(mode)
 	checkpoint.position = [position_value.x, position_value.y]
 	saves.save_game(checkpoint)
-	ui.notice("Лунный рубеж: здоровье и энергия восстановлены")
+	music.play_sfx("heal")
+	ui.notice("Лунный алтарь: здоровье и энергия восстановлены")
 
+## Defeat is not a menu: after a short beat the guardian rises again at the last altar.
 func _defeated() -> void:
-	_pause()
-	overlay_kind = "result"
-	ui.result(false, mode == "practice")
+	ui.notice("Поднимайся, Сейлор Мун…")
+	var defeated_level = level
+	var snapshot = checkpoint.duplicate(true)
+	snapshot.hp = db.config.combat.masks
+	snapshot.energy = db.characters[selected].energy
+	snapshot.completed = false
+	await get_tree().create_timer(1.4).timeout
+	if is_instance_valid(defeated_level) and defeated_level == level and mode in ["story", "practice"]:
+		_start(mode, selected, snapshot)
 
 func _complete() -> void:
 	_save()
@@ -239,9 +248,17 @@ func _feedback(kind: String) -> void:
 	if kind.begins_with("cast:"):
 		var id = kind.trim_prefix("cast:")
 		ui.ability_banner(db.skills[id].canonical_name)
+	elif kind.begins_with("tip:"): ui.notice(kind.trim_prefix("tip:"))
 	elif kind == "locked": ui.notice("Этот приём появится позже по сюжету. Он доступен в тренировке.")
-	elif kind == "empty": ui.notice("Недостаточно энергии")
-	elif kind == "pickup": music.play_sfx("menu")
+	elif kind == "empty": ui.notice("Недостаточно энергии — бейте врагов, чтобы её накопить")
+	elif kind == "full": return
+	elif kind == "arena":
+		music.play_music("battle")
+		music.play_sfx("arena")
+	elif kind == "phase":
+		ui.notice("Морга в ярости!")
+		music.play_sfx("phase")
+	elif kind == "attack": music.play_sfx("slash")
 	else: music.play_sfx(kind)
 
 func _unhandled_input(event: InputEvent) -> void:

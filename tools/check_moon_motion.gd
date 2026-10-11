@@ -65,8 +65,8 @@ func run() -> void:
 	player.position=Vector2(180,610)
 	Input.action_press("a_right")
 	await create_timer(0.15).timeout
-	check(player.sprite.animation=="walk","Far movement should walk")
-	await shot("moon-walk")
+	check(player.sprite.animation=="run","Full-speed movement should run")
+	await shot("moon-run")
 	player.position=game.level.foes[0].position-Vector2(220,0)
 	await create_timer(0.15).timeout
 	check(player.sprite.animation=="run","Enemy proximity should run")

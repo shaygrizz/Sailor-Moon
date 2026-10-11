@@ -36,19 +36,89 @@
       "gain_db": -10
     },
     "attack": {
-      "path": "res://assets/audio/sfx/chime.wav",
+      "path": "res://assets/audio/sfx/slash.wav",
       "external": "Music/attack.wav",
-      "gain_db": -15
+      "gain_db": -12
     },
     "magic": {
-      "path": "res://assets/audio/sfx/chime.wav",
+      "path": "res://assets/audio/sfx/magic.wav",
       "external": "Music/magic.wav",
-      "gain_db": -8
+      "gain_db": -10
     },
     "hurt": {
-      "path": "res://assets/audio/sfx/chime.wav",
+      "path": "res://assets/audio/sfx/hurt.wav",
       "external": "Music/hurt.wav",
+      "gain_db": -6
+    },
+    "slash": {
+      "path": "res://assets/audio/sfx/slash.wav",
+      "external": "Music/slash.wav",
       "gain_db": -12
+    },
+    "hit": {
+      "path": "res://assets/audio/sfx/hit.wav",
+      "external": "Music/hit.wav",
+      "gain_db": -6
+    },
+    "jump": {
+      "path": "res://assets/audio/sfx/jump.wav",
+      "external": "Music/jump.wav",
+      "gain_db": -16
+    },
+    "dash": {
+      "path": "res://assets/audio/sfx/dash.wav",
+      "external": "Music/dash.wav",
+      "gain_db": -12
+    },
+    "heal": {
+      "path": "res://assets/audio/sfx/heal.wav",
+      "external": "Music/heal.wav",
+      "gain_db": -8
+    },
+    "pickup": {
+      "path": "res://assets/audio/sfx/pickup.wav",
+      "external": "Music/pickup.wav",
+      "gain_db": -10
+    },
+    "pogo": {
+      "path": "res://assets/audio/sfx/pogo.wav",
+      "external": "Music/pogo.wav",
+      "gain_db": -9
+    },
+    "kill": {
+      "path": "res://assets/audio/sfx/kill.wav",
+      "external": "Music/kill.wav",
+      "gain_db": -7
+    },
+    "slam": {
+      "path": "res://assets/audio/sfx/slam.wav",
+      "external": "Music/slam.wav",
+      "gain_db": -4
+    },
+    "windup": {
+      "path": "res://assets/audio/sfx/windup.wav",
+      "external": "Music/windup.wav",
+      "gain_db": -12
+    },
+    "focus": {
+      "path": "res://assets/audio/sfx/focus.wav",
+      "external": "Music/focus.wav",
+      "gain_db": -14
+    },
+    "victory": {
+      "path": "res://assets/audio/sfx/victory.wav",
+      "external": "Music/victory.wav",
+      "gain_db": -8
+    },
+    "arena": {
+      "path": "res://assets/audio/sfx/slam.wav",
+      "external": "Music/arena.wav",
+      "gain_db": -8
+    },
+    "phase": {
+      "path": "res://assets/audio/sfx/slam.wav",
+      "external": "Music/phase.wav",
+      "gain_db": -4
     }
   }
 }

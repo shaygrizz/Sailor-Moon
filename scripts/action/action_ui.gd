@@ -27,6 +27,48 @@ var cast_time: float = 0
 var serif: Font
 var selected_character: String = "moon"
 var profiles: Dictionary = {}
+var masks: Masks
+var controls_hint: Label
+var hud_age: float = 0
+
+## Hearts drawn like Hollow Knight masks; the one just lost flashes before fading.
+class Masks extends Control:
+	var current: float = 5
+	var total: int = 5
+	var lost_flash: float = 0
+	var gained_flash: float = 0
+	func set_value(value: float, maximum: int) -> void:
+		if value < current: lost_flash = 0.5
+		elif value > current: gained_flash = 0.5
+		current = value
+		total = maximum
+		queue_redraw()
+	func _process(delta: float) -> void:
+		if lost_flash > 0 or gained_flash > 0:
+			lost_flash = maxf(0, lost_flash - delta)
+			gained_flash = maxf(0, gained_flash - delta)
+			queue_redraw()
+	func _heart(center: Vector2, radius: float) -> PackedVector2Array:
+		var points = PackedVector2Array()
+		for i in range(28):
+			var t = TAU * i / 28
+			points.append(center + Vector2(16 * pow(sin(t), 3), -(13 * cos(t) - 5 * cos(2*t) - 2 * cos(3*t) - cos(4*t))) * radius / 16)
+		return points
+	func _draw() -> void:
+		for i in range(total):
+			var center = Vector2(16 + i * 36, 16)
+			var filled = i < int(current)
+			var radius = 15.0
+			if filled and i == int(current) - 1 and gained_flash > 0: radius += gained_flash * 8
+			var shape = _heart(center, radius)
+			if filled:
+				draw_colored_polygon(shape, Color("ff5f93"))
+				draw_colored_polygon(_heart(center + Vector2(-4, -4), 5), Color(1, 1, 1, 0.55))
+			else:
+				draw_colored_polygon(shape, Color("1c1424"))
+				if i == int(current) and lost_flash > 0: draw_colored_polygon(shape, Color(1, 1, 1, lost_flash * 1.6))
+			shape.append(shape[0])
+			draw_polyline(shape, Color("fff0f6") if filled else Color("6b4f6e"), 2, true)
 
 func configure(database) -> void:
 	db = database
@@ -201,13 +243,18 @@ func hud(actor: Dictionary, mode: String) -> void:
 	_polygon(PackedVector2Array([Vector2(0,108),Vector2(450,130),Vector2(430,138),Vector2(0,116)]), Color("f02c5b"))
 	_texture(portrait(actor.id), Vector2(16,15), Vector2(88,80))
 	hud_name = _label(actor.title.to_upper(), Vector2(118,12), 310, 24)
-	hp_bar = _bar(Vector2(118,56), Vector2(285,12), Color("75e0db"))
-	energy_bar = _bar(Vector2(118,78), Vector2(245,8), Color("fa74b7"))
+	masks = Masks.new()
+	masks.position = Vector2(118, 44)
+	masks.size = Vector2(300, 34)
+	masks.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	page.add_child(masks)
+	energy_bar = _bar(Vector2(118,82), Vector2(245,8), Color("fa74b7"))
 	hud_skill = _label("", Vector2(118,91), 320, 14, Color("e7d5e1"))
 	var tag = "ТРЕНИРОВКА / ВСЕ ХРАНИТЕЛЬНИЦЫ" if mode == "practice" else "ACT 1 / УСАГИ — SAILOR MOON"
 	_label(tag, Vector2(780,24), 470, 16, Color("fff0da"))
 	hud_objective = _label("Доберитесь до ювелирного магазина", Vector2(780,55), 470, 18)
-	_label("A D  ДВИЖЕНИЕ     SPACE  ПРЫЖОК     SHIFT  РЫВОК     J  УДАР     K/Q  ПРИЁМ     L/E  СПЕЦПРИЁМ     TAB  ОТРЯД     ESC  МЕНЮ", Vector2(24,687), 1240, 14)
+	hud_age = 0
+	controls_hint = _label("A D  ДВИЖЕНИЕ    SPACE  ПРЫЖОК    J  УДАР (+W / S — ВВЕРХ / ВНИЗ)    SHIFT  РЫВОК    F  ЛЕЧЕНИЕ    K/Q  ПРИЁМ    L/E  СПЕЦПРИЁМ    ESC  МЕНЮ", Vector2(24,687), 1240, 14)
 	toast = _label("", Vector2(330,145), 650, 24, Color("fff0d1"))
 	toast.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	cast_banner = _label("", Vector2(570,590), 680, 36, Color("ffcae2"), null, true)
@@ -215,9 +262,10 @@ func hud(actor: Dictionary, mode: String) -> void:
 
 func update_hud(player, boss_alive: bool) -> void:
 	if page_kind != "hud": return
-	hp_bar.value = player.hp / player.actor.hp * 100
+	masks.set_value(player.hp, player.max_hp)
 	energy_bar.value = player.energy / player.actor.energy * 100
-	hud_skill.text = "%d HP   /   %d ЭНЕРГИИ" % [player.hp, player.energy]
+	var heals = int(player.energy / db.config.combat.focus_cost)
+	hud_skill.text = "ЭНЕРГИЯ %d   /   F — ЛЕЧЕНИЙ: %d" % [player.energy, heals]
 	hud_objective.text = "Победите ёму и спасите Нару" if boss_alive else "Нару спасена — пройдите к свету справа"
 
 func notice(text: String) -> void:
@@ -351,7 +399,7 @@ func settings(audio, fullscreen: bool) -> void:
 	languages.item_selected.connect(func(index): _emit("language", {"id":["ru","en","it"][index]}), Object.CONNECT_DEFERRED)
 	host.add_child(languages)
 	_button("ПОЛНЫЙ ЭКРАН: " + ("ВКЛ" if fullscreen else "ВЫКЛ"), Vector2(100,460), Vector2(600,58), func(): _emit("fullscreen"), host)
-	_label("Музыку можно заменить в папке Music рядом с игрой.\nУправление: J — удар, K/Q — приём, L/E — спецприём.\nГеймпад: A — прыжок, X — удар, Y — приём, RB — рывок, LB — спецприём.", Vector2(100,565), 1090, 19, Color("cfbdcc"), host)
+	_label("Музыку можно заменить в папке Music рядом с игрой.\nУправление: J — удар (W / S — вверх / вниз), F — лечение, K/Q — приём, L/E — спецприём.\nГеймпад: A — прыжок, X — удар, Y — приём, RB — рывок, RT — лечение, LB — спецприём.", Vector2(100,565), 1090, 19, Color("cfbdcc"), host)
 	_button("НАЗАД", Vector2(990,650), Vector2(220,45), func(): _emit("back"), host)
 
 func dialogue(speaker: String, text: String) -> void:
@@ -370,6 +418,9 @@ func result(victory: bool, practice: bool) -> void:
 
 func _process(delta: float) -> void:
 	elapsed += delta
+	if is_instance_valid(controls_hint):
+		hud_age += delta
+		controls_hint.modulate.a = clampf(1.0 - (hud_age - 25.0) / 2.0, 0.0, 1.0)
 	if is_instance_valid(title_art):
 		title_art.position = Vector2(-12 + sin(elapsed * 0.23) * 7, -8 + cos(elapsed * 0.19) * 4)
 	if toast_time > 0:

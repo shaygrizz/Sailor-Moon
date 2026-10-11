@@ -66,6 +66,7 @@ func run() -> void:
 		p.position=Vector2(220,610)
 		p.velocity=Vector2.ZERO
 		p.hurt_left=0;p.invulnerable=0;p.skill_cooldown=0;p.energy=p.actor.energy
+		p.hp=p.max_hp;p.control_enabled=true
 		p.facing=-1
 		p._physics_process(1.0/60)
 		check(p.sprite.flip_h,id+" did not face left")
@@ -73,7 +74,7 @@ func run() -> void:
 		p.combat_ready=false
 		Input.action_press("a_right")
 		for i in 15:p._physics_process(1.0/60)
-		check(p.sprite.animation=="walk",id+" far movement not walk")
+		check(p.sprite.animation=="run",id+" full-speed movement not run")
 		p.combat_ready=true
 		p._physics_process(1.0/60)
 		check(p.sprite.animation=="run",id+" combat movement not run")

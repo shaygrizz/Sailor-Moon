@@ -1,0 +1,81 @@
+{
+  "crawler": {
+    "name": "Тень-ползун",
+    "hp": 34,
+    "speed": 70,
+    "contact": 1,
+    "size": [
+      46,
+      34
+    ],
+    "knockback": 260,
+    "patrol": 170,
+    "color": "#5b3f86",
+    "eye": "#ff4d7a"
+  },
+  "lunger": {
+    "name": "Ёма-солдат",
+    "hp": 70,
+    "speed": 95,
+    "contact": 1,
+    "size": [
+      34,
+      80
+    ],
+    "knockback": 220,
+    "trigger_range": 250,
+    "windup": 0.5,
+    "lunge_speed": 640,
+    "lunge_seconds": 0.3,
+    "recover": 0.75,
+    "sprite_height": 110,
+    "color": "#49336a",
+    "eye": "#ff466e"
+  },
+  "flyer": {
+    "name": "Тёмная бабочка",
+    "hp": 40,
+    "speed": 150,
+    "contact": 1,
+    "size": [
+      40,
+      34
+    ],
+    "knockback": 300,
+    "trigger_range": 300,
+    "windup": 0.45,
+    "swoop_speed": 560,
+    "swoop_seconds": 0.45,
+    "recover": 0.8,
+    "hover_height": 165,
+    "color": "#7b3f9e",
+    "eye": "#ffd36e"
+  },
+  "boss": {
+    "name": "Морга",
+    "hp": 340,
+    "speed": 110,
+    "contact": 1,
+    "size": [
+      44,
+      100
+    ],
+    "knockback": 40,
+    "trigger_range": 760,
+    "windup": 0.6,
+    "recover": 0.8,
+    "pause": 0.9,
+    "phase_ratio": 0.5,
+    "volley": 3,
+    "volley_phase2": 5,
+    "volley_spread": 0.32,
+    "slam_jump": 760,
+    "charge_speed": 720,
+    "charge_seconds": 0.62,
+    "projectile_speed": 300,
+    "shockwave_speed": 420,
+    "sprite_height": 152,
+    "color": "#49336a",
+    "eye": "#ff466e"
+  }
+}

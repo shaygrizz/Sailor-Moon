@@ -6,6 +6,7 @@ var skills: Dictionary
 var levels: Dictionary
 var story: Dictionary
 var audio: Dictionary
+var enemies: Dictionary
 var errors: Array[String] = []
 
 func load_all() -> bool:
@@ -15,6 +16,7 @@ func load_all() -> bool:
 	levels = _read("levels")
 	story = _read("story")
 	audio = _read("audio")
+	enemies = _read("enemies")
 	if not errors.is_empty(): return false
 	for id in characters:
 		var actor = characters[id]
@@ -26,6 +28,13 @@ func load_all() -> bool:
 		for key in ["damage", "cost", "cooldown", "speed", "lifetime", "radius", "slow_seconds"]:
 			if not skills[id].get(key) is float and not skills[id].get(key) is int:
 				errors.append("Invalid ability number: " + id + "/" + key)
+	for id in enemies:
+		for key in ["hp", "speed", "contact", "knockback"]:
+			if not enemies[id].get(key) is float and not enemies[id].get(key) is int:
+				errors.append("Invalid enemy number: " + id + "/" + key)
+	for level_id in levels:
+		for entry in levels[level_id].get("enemies", []) + levels[level_id].get("practice_enemies", []):
+			if not enemies.has(entry.get("kind", "")): errors.append("Unknown enemy kind: " + level_id + "/" + str(entry.get("kind")))
 	return errors.is_empty()
 
 func _read(id: String) -> Dictionary:
