@@ -1,0 +1,184 @@
+{
+  "keeper": [
+    {
+      "when": [
+        {
+          "path": "quest_steps.first_star",
+          "equals": 0
+        }
+      ],
+      "commands": [
+        {
+          "type": "dialogue",
+          "id": "keeper",
+          "topic": "keeper_met"
+        }
+      ]
+    },
+    {
+      "when": [
+        {
+          "path": "quest_steps.first_star",
+          "equals": 3
+        }
+      ],
+      "commands": [
+        {
+          "type": "restore_party"
+        },
+        {
+          "type": "dialogue",
+          "id": "ending",
+          "topic": "light_restored"
+        }
+      ]
+    },
+    {
+      "when": [
+        {
+          "path": "quest_steps.first_star",
+          "equals": 4
+        }
+      ],
+      "commands": [
+        {
+          "type": "restore_party"
+        },
+        {
+          "type": "dialogue",
+          "id": "complete",
+          "topic": ""
+        }
+      ]
+    },
+    {
+      "when": [],
+      "commands": [
+        {
+          "type": "restore_party"
+        },
+        {
+          "type": "dialogue",
+          "id": "reminder",
+          "topic": ""
+        }
+      ]
+    }
+  ],
+  "chest": [
+    {
+      "when": [
+        {
+          "path": "flags.chest_open",
+          "equals": true
+        }
+      ],
+      "commands": [
+        {
+          "type": "notice",
+          "text": "Ларец пуст. Осколок уже у вас."
+        }
+      ]
+    },
+    {
+      "when": [
+        {
+          "path": "quest_steps.first_star",
+          "equals": 0
+        }
+      ],
+      "commands": [
+        {
+          "type": "dialogue",
+          "id": "chest_locked",
+          "topic": ""
+        }
+      ]
+    },
+    {
+      "when": [],
+      "commands": [
+        {
+          "type": "flag",
+          "id": "chest_open",
+          "value": true
+        },
+        {
+          "type": "item",
+          "id": "moonshard",
+          "amount": 1
+        },
+        {
+          "type": "event",
+          "topic": "shard_found"
+        },
+        {
+          "type": "notice",
+          "text": "Получен лунный осколок. Врата сновидений открыты."
+        }
+      ]
+    }
+  ],
+  "gate": [
+    {
+      "when": [
+        {
+          "path": "inventory.moonshard",
+          "equals": 1
+        }
+      ],
+      "commands": [
+        {
+          "type": "travel",
+          "id": "dream"
+        }
+      ]
+    },
+    {
+      "when": [],
+      "commands": [
+        {
+          "type": "dialogue",
+          "id": "locked",
+          "topic": ""
+        }
+      ]
+    }
+  ],
+  "return": [
+    {
+      "when": [],
+      "commands": [
+        {
+          "type": "travel",
+          "id": "sanctuary"
+        }
+      ]
+    }
+  ],
+  "boss": [
+    {
+      "when": [
+        {
+          "path": "flags.won_eclipse",
+          "equals": true
+        }
+      ],
+      "commands": [
+        {
+          "type": "notice",
+          "text": "Сад свободен от теней. Вернитесь к хранительнице."
+        }
+      ]
+    },
+    {
+      "when": [],
+      "commands": [
+        {
+          "type": "battle",
+          "id": "eclipse"
+        }
+      ]
+    }
+  ]
+}

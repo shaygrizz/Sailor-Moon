@@ -1,0 +1,32 @@
+; Moonveil: data-driven Godot 4.5 browser RPG.
+config_version=5
+
+[application]
+config/name="Sailor Moon — In the Name of the Moon"
+run/main_scene="res://scenes/action/main.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="SailorMoonAction"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+config/icon="res://assets/ui/moon.svg"
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+window/handheld/orientation=6
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+environment/defaults/default_clear_color=Color(0.025, 0.03, 0.08, 1)
+
+[audio]
+driver/enable_input=false
+
+[input_devices]
+pointing/emulate_touch_from_mouse=false
+pointing/emulate_mouse_from_touch=true

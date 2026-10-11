@@ -1,0 +1,4697 @@
+{
+  "moon": {
+    "sheet": "res://assets/sprites/snes/sailor_moon.png",
+    "color_key": "#80ffff",
+    "canvas": [
+      160,
+      144
+    ],
+    "frames": {
+      "idle_a": {
+        "rect": [
+          64,
+          13,
+          44,
+          94
+        ],
+        "pivot": [
+          22,
+          95
+        ],
+        "selection": [
+          62,
+          8,
+          49,
+          101
+        ],
+        "source_anchor": [
+          86,
+          108
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1792
+      },
+      "idle_b": {
+        "rect": [
+          111,
+          12,
+          42,
+          95
+        ],
+        "pivot": [
+          21,
+          96
+        ],
+        "selection": [
+          112,
+          8,
+          44,
+          101
+        ],
+        "source_anchor": [
+          132,
+          108
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1848
+      },
+      "walk_0": {
+        "rect": [
+          308,
+          14,
+          37,
+          95
+        ],
+        "pivot": [
+          17,
+          95
+        ],
+        "selection": [
+          297,
+          8,
+          56,
+          103
+        ],
+        "source_anchor": [
+          325,
+          109
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1731
+      },
+      "walk_1": {
+        "rect": [
+          362,
+          13,
+          33,
+          96
+        ],
+        "pivot": [
+          19,
+          96
+        ],
+        "selection": [
+          354,
+          8,
+          54,
+          103
+        ],
+        "source_anchor": [
+          381,
+          109
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1547
+      },
+      "walk_2": {
+        "rect": [
+          418,
+          14,
+          36,
+          96
+        ],
+        "pivot": [
+          23,
+          95
+        ],
+        "selection": [
+          413,
+          8,
+          52,
+          103
+        ],
+        "source_anchor": [
+          441,
+          109
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1622
+      },
+      "walk_3": {
+        "rect": [
+          479,
+          14,
+          40,
+          95
+        ],
+        "pivot": [
+          23,
+          95
+        ],
+        "selection": [
+          473,
+          8,
+          52,
+          103
+        ],
+        "source_anchor": [
+          502,
+          109
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1560
+      },
+      "walk_4": {
+        "rect": [
+          543,
+          14,
+          32,
+          95
+        ],
+        "pivot": [
+          21,
+          95
+        ],
+        "selection": [
+          535,
+          8,
+          51,
+          103
+        ],
+        "source_anchor": [
+          564,
+          109
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1495
+      },
+      "walk_5": {
+        "rect": [
+          608,
+          16,
+          33,
+          95
+        ],
+        "pivot": [
+          24,
+          93
+        ],
+        "selection": [
+          598,
+          8,
+          53,
+          103
+        ],
+        "source_anchor": [
+          632,
+          109
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1607
+      },
+      "punch_a": {
+        "rect": [
+          166,
+          13,
+          47,
+          94
+        ],
+        "pivot": [
+          24,
+          95
+        ],
+        "selection": [
+          162,
+          9,
+          56,
+          100
+        ],
+        "source_anchor": [
+          190,
+          108
+        ],
+        "exclusions": [],
+        "source_pixel_count": 2109
+      },
+      "punch_b": {
+        "rect": [
+          227,
+          15,
+          64,
+          92
+        ],
+        "pivot": [
+          27,
+          93
+        ],
+        "selection": [
+          224,
+          10,
+          68,
+          99
+        ],
+        "source_anchor": [
+          254,
+          108
+        ],
+        "exclusions": [],
+        "source_pixel_count": 2086
+      },
+      "kick_a": {
+        "rect": [
+          262,
+          173,
+          49,
+          92
+        ],
+        "pivot": [
+          27,
+          94
+        ],
+        "selection": [
+          263,
+          170,
+          55,
+          98
+        ],
+        "source_anchor": [
+          289,
+          267
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1705
+      },
+      "kick_b": {
+        "rect": [
+          391,
+          171,
+          92,
+          94
+        ],
+        "pivot": [
+          39,
+          96
+        ],
+        "selection": [
+          393,
+          166,
+          91,
+          102
+        ],
+        "source_anchor": [
+          430,
+          267
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1980
+      },
+      "cast_a": {
+        "rect": [
+          291,
+          309,
+          32,
+          96
+        ],
+        "pivot": [
+          28,
+          100
+        ],
+        "selection": [
+          289,
+          303,
+          49,
+          108
+        ],
+        "source_anchor": [
+          319,
+          409
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1709
+      },
+      "cast_b": {
+        "rect": [
+          331,
+          312,
+          64,
+          92
+        ],
+        "pivot": [
+          36,
+          97
+        ],
+        "selection": [
+          338,
+          303,
+          59,
+          108
+        ],
+        "source_anchor": [
+          367,
+          409
+        ],
+        "exclusions": [
+          [
+            63,
+            39,
+            1,
+            1
+          ],
+          [
+            63,
+            40,
+            1,
+            1
+          ],
+          [
+            62,
+            41,
+            2,
+            1
+          ],
+          [
+            61,
+            42,
+            3,
+            1
+          ],
+          [
+            61,
+            43,
+            3,
+            1
+          ],
+          [
+            61,
+            44,
+            3,
+            1
+          ],
+          [
+            62,
+            45,
+            2,
+            1
+          ],
+          [
+            63,
+            46,
+            1,
+            1
+          ]
+        ],
+        "source_pixel_count": 1894
+      },
+      "cast_c": {
+        "rect": [
+          392,
+          311,
+          54,
+          96
+        ],
+        "pivot": [
+          37,
+          98
+        ],
+        "selection": [
+          399,
+          303,
+          59,
+          108
+        ],
+        "source_anchor": [
+          429,
+          409
+        ],
+        "exclusions": [
+          [
+            0,
+            14,
+            2,
+            1
+          ],
+          [
+            0,
+            15,
+            3,
+            1
+          ],
+          [
+            0,
+            16,
+            3,
+            1
+          ],
+          [
+            0,
+            17,
+            3,
+            1
+          ],
+          [
+            0,
+            18,
+            3,
+            1
+          ],
+          [
+            0,
+            19,
+            2,
+            1
+          ],
+          [
+            0,
+            20,
+            1,
+            1
+          ]
+        ],
+        "source_pixel_count": 1706
+      },
+      "cast_d": {
+        "rect": [
+          532,
+          301,
+          48,
+          108
+        ],
+        "pivot": [
+          27,
+          108
+        ],
+        "selection": [
+          531,
+          300,
+          51,
+          111
+        ],
+        "source_anchor": [
+          559,
+          409
+        ],
+        "exclusions": [],
+        "source_pixel_count": 2031
+      },
+      "jump_a": {
+        "rect": [
+          26,
+          1446,
+          42,
+          82
+        ],
+        "pivot": [
+          23,
+          84
+        ],
+        "selection": [
+          23,
+          1436,
+          51,
+          95
+        ],
+        "source_anchor": [
+          49,
+          1530
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1666
+      },
+      "jump_b": {
+        "rect": [
+          79,
+          1433,
+          35,
+          96
+        ],
+        "pivot": [
+          23,
+          97
+        ],
+        "selection": [
+          78,
+          1433,
+          54,
+          98
+        ],
+        "source_anchor": [
+          102,
+          1530
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1604
+      },
+      "jump_c": {
+        "rect": [
+          138,
+          1435,
+          41,
+          63
+        ],
+        "pivot": [
+          21,
+          95
+        ],
+        "selection": [
+          134,
+          1430,
+          53,
+          102
+        ],
+        "source_anchor": [
+          159,
+          1530
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1345
+      },
+      "dash": {
+        "rect": [
+          60,
+          175,
+          62,
+          90
+        ],
+        "pivot": [
+          33,
+          92
+        ],
+        "selection": [
+          61,
+          171,
+          66,
+          98
+        ],
+        "source_anchor": [
+          93,
+          267
+        ],
+        "exclusions": [],
+        "source_pixel_count": 2120
+      },
+      "hurt_a": {
+        "rect": [
+          3,
+          687,
+          45,
+          89
+        ],
+        "pivot": [
+          26,
+          90
+        ],
+        "selection": [
+          3,
+          683,
+          53,
+          96
+        ],
+        "source_anchor": [
+          29,
+          777
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1678
+      },
+      "hurt_b": {
+        "rect": [
+          241,
+          728,
+          72,
+          51
+        ],
+        "pivot": [
+          41,
+          51
+        ],
+        "selection": [
+          244,
+          715,
+          81,
+          67
+        ],
+        "source_anchor": [
+          282,
+          779
+        ],
+        "exclusions": [
+          [
+            62,
+            0,
+            3,
+            1
+          ]
+        ],
+        "source_pixel_count": 1751
+      },
+      "idle_side": {
+        "rect": [
+          8,
+          11,
+          39,
+          96
+        ],
+        "pivot": [
+          21,
+          97
+        ],
+        "selection": [
+          1,
+          5,
+          56,
+          105
+        ],
+        "source_anchor": [
+          29,
+          108
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1655
+      },
+      "spiral_00": {
+        "rect": [
+          15,
+          843,
+          43,
+          119
+        ],
+        "pivot": [
+          21,
+          117
+        ],
+        "selection": [
+          8,
+          838,
+          54,
+          127
+        ],
+        "source_anchor": [
+          36,
+          960
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1937
+      },
+      "spiral_01": {
+        "rect": [
+          67,
+          841,
+          43,
+          121
+        ],
+        "pivot": [
+          21,
+          119
+        ],
+        "selection": [
+          62,
+          838,
+          54,
+          127
+        ],
+        "source_anchor": [
+          88,
+          960
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2022
+      },
+      "spiral_02": {
+        "rect": [
+          124,
+          843,
+          43,
+          119
+        ],
+        "pivot": [
+          21,
+          117
+        ],
+        "selection": [
+          116,
+          838,
+          61,
+          127
+        ],
+        "source_anchor": [
+          145,
+          960
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2066
+      },
+      "spiral_03": {
+        "rect": [
+          187,
+          840,
+          64,
+          119
+        ],
+        "pivot": [
+          35,
+          120
+        ],
+        "selection": [
+          177,
+          838,
+          77,
+          127
+        ],
+        "source_anchor": [
+          222,
+          960
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1933
+      },
+      "spiral_04": {
+        "rect": [
+          257,
+          840,
+          69,
+          119
+        ],
+        "pivot": [
+          37,
+          120
+        ],
+        "selection": [
+          254,
+          838,
+          76,
+          127
+        ],
+        "source_anchor": [
+          294,
+          960
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1978
+      },
+      "spiral_05": {
+        "rect": [
+          335,
+          841,
+          71,
+          119
+        ],
+        "pivot": [
+          36,
+          119
+        ],
+        "selection": [
+          330,
+          838,
+          79,
+          127
+        ],
+        "source_anchor": [
+          371,
+          960
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2009
+      },
+      "spiral_06": {
+        "rect": [
+          412,
+          840,
+          72,
+          119
+        ],
+        "pivot": [
+          35,
+          120
+        ],
+        "selection": [
+          409,
+          838,
+          80,
+          127
+        ],
+        "source_anchor": [
+          447,
+          960
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2037
+      },
+      "spiral_07": {
+        "rect": [
+          495,
+          841,
+          72,
+          118
+        ],
+        "pivot": [
+          36,
+          119
+        ],
+        "selection": [
+          489,
+          838,
+          86,
+          127
+        ],
+        "source_anchor": [
+          531,
+          960
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2031
+      },
+      "spiral_08": {
+        "rect": [
+          584,
+          842,
+          72,
+          115
+        ],
+        "pivot": [
+          37,
+          118
+        ],
+        "selection": [
+          575,
+          838,
+          92,
+          127
+        ],
+        "source_anchor": [
+          621,
+          960
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2018
+      },
+      "spiral_09": {
+        "rect": [
+          14,
+          971,
+          72,
+          110
+        ],
+        "pivot": [
+          34,
+          109
+        ],
+        "selection": [
+          5,
+          968,
+          86,
+          120
+        ],
+        "source_anchor": [
+          48,
+          1080
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2015
+      },
+      "spiral_10": {
+        "rect": [
+          96,
+          981,
+          71,
+          100
+        ],
+        "pivot": [
+          34,
+          99
+        ],
+        "selection": [
+          91,
+          968,
+          84,
+          120
+        ],
+        "source_anchor": [
+          130,
+          1080
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2005
+      },
+      "spiral_11": {
+        "rect": [
+          182,
+          985,
+          71,
+          96
+        ],
+        "pivot": [
+          34,
+          95
+        ],
+        "selection": [
+          175,
+          968,
+          84,
+          120
+        ],
+        "source_anchor": [
+          216,
+          1080
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2008
+      },
+      "spiral_12": {
+        "rect": [
+          267,
+          984,
+          71,
+          96
+        ],
+        "pivot": [
+          34,
+          96
+        ],
+        "selection": [
+          259,
+          968,
+          85,
+          120
+        ],
+        "source_anchor": [
+          301,
+          1080
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1941
+      },
+      "spiral_13": {
+        "rect": [
+          350,
+          985,
+          71,
+          96
+        ],
+        "pivot": [
+          35,
+          95
+        ],
+        "selection": [
+          344,
+          968,
+          83,
+          120
+        ],
+        "source_anchor": [
+          385,
+          1080
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1917
+      },
+      "spiral_14": {
+        "rect": [
+          433,
+          985,
+          68,
+          96
+        ],
+        "pivot": [
+          35,
+          95
+        ],
+        "selection": [
+          427,
+          968,
+          81,
+          120
+        ],
+        "source_anchor": [
+          468,
+          1080
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1865
+      },
+      "spiral_15": {
+        "rect": [
+          515,
+          988,
+          63,
+          94
+        ],
+        "pivot": [
+          38,
+          92
+        ],
+        "selection": [
+          508,
+          968,
+          77,
+          120
+        ],
+        "source_anchor": [
+          553,
+          1080
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2096
+      },
+      "spiral_16": {
+        "rect": [
+          597,
+          986,
+          61,
+          94
+        ],
+        "pivot": [
+          38,
+          94
+        ],
+        "selection": [
+          585,
+          968,
+          85,
+          120
+        ],
+        "source_anchor": [
+          635,
+          1080
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2109
+      },
+      "spiral_17": {
+        "rect": [
+          16,
+          1122,
+          61,
+          94
+        ],
+        "pivot": [
+          37,
+          93
+        ],
+        "selection": [
+          8,
+          1092,
+          77,
+          131
+        ],
+        "source_anchor": [
+          53,
+          1215
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2092
+      },
+      "spiral_18": {
+        "rect": [
+          94,
+          1122,
+          61,
+          94
+        ],
+        "pivot": [
+          37,
+          93
+        ],
+        "selection": [
+          85,
+          1092,
+          77,
+          131
+        ],
+        "source_anchor": [
+          131,
+          1215
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2116
+      },
+      "spiral_19": {
+        "rect": [
+          168,
+          1122,
+          61,
+          94
+        ],
+        "pivot": [
+          37,
+          93
+        ],
+        "selection": [
+          162,
+          1092,
+          73,
+          131
+        ],
+        "source_anchor": [
+          205,
+          1215
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2113
+      },
+      "spiral_20": {
+        "rect": [
+          241,
+          1122,
+          61,
+          94
+        ],
+        "pivot": [
+          37,
+          93
+        ],
+        "selection": [
+          235,
+          1092,
+          73,
+          131
+        ],
+        "source_anchor": [
+          278,
+          1215
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2102
+      },
+      "spiral_21": {
+        "rect": [
+          315,
+          1098,
+          54,
+          119
+        ],
+        "pivot": [
+          32,
+          117
+        ],
+        "selection": [
+          308,
+          1092,
+          69,
+          131
+        ],
+        "source_anchor": [
+          347,
+          1215
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2239
+      },
+      "spiral_22": {
+        "rect": [
+          385,
+          1097,
+          53,
+          119
+        ],
+        "pivot": [
+          33,
+          118
+        ],
+        "selection": [
+          377,
+          1092,
+          68,
+          131
+        ],
+        "source_anchor": [
+          418,
+          1215
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2222
+      },
+      "spiral_23": {
+        "rect": [
+          452,
+          1096,
+          53,
+          119
+        ],
+        "pivot": [
+          33,
+          119
+        ],
+        "selection": [
+          445,
+          1092,
+          66,
+          131
+        ],
+        "source_anchor": [
+          485,
+          1215
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2239
+      },
+      "spiral_24": {
+        "rect": [
+          518,
+          1097,
+          53,
+          119
+        ],
+        "pivot": [
+          34,
+          118
+        ],
+        "selection": [
+          511,
+          1092,
+          66,
+          131
+        ],
+        "source_anchor": [
+          552,
+          1215
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2223
+      },
+      "spiral_25": {
+        "rect": [
+          583,
+          1095,
+          53,
+          121
+        ],
+        "pivot": [
+          32,
+          120
+        ],
+        "selection": [
+          577,
+          1092,
+          73,
+          131
+        ],
+        "source_anchor": [
+          615,
+          1215
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2225
+      },
+      "spiral_26": {
+        "rect": [
+          20,
+          1234,
+          52,
+          121
+        ],
+        "pivot": [
+          33,
+          122
+        ],
+        "selection": [
+          10,
+          1225,
+          68,
+          137
+        ],
+        "source_anchor": [
+          53,
+          1356
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2193
+      },
+      "spiral_27": {
+        "rect": [
+          83,
+          1233,
+          51,
+          121
+        ],
+        "pivot": [
+          32,
+          123
+        ],
+        "selection": [
+          78,
+          1225,
+          67,
+          137
+        ],
+        "source_anchor": [
+          115,
+          1356
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2154
+      },
+      "spiral_28": {
+        "rect": [
+          158,
+          1233,
+          49,
+          121
+        ],
+        "pivot": [
+          32,
+          123
+        ],
+        "selection": [
+          145,
+          1225,
+          74,
+          137
+        ],
+        "source_anchor": [
+          190,
+          1356
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2120
+      },
+      "spiral_29": {
+        "rect": [
+          231,
+          1233,
+          47,
+          121
+        ],
+        "pivot": [
+          27,
+          123
+        ],
+        "selection": [
+          219,
+          1225,
+          70,
+          137
+        ],
+        "source_anchor": [
+          258,
+          1356
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2104
+      },
+      "spiral_30": {
+        "rect": [
+          300,
+          1234,
+          44,
+          119
+        ],
+        "pivot": [
+          25,
+          122
+        ],
+        "selection": [
+          289,
+          1225,
+          69,
+          137
+        ],
+        "source_anchor": [
+          325,
+          1356
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2023
+      },
+      "spiral_31": {
+        "rect": [
+          370,
+          1234,
+          43,
+          119
+        ],
+        "pivot": [
+          25,
+          122
+        ],
+        "selection": [
+          358,
+          1225,
+          68,
+          137
+        ],
+        "source_anchor": [
+          395,
+          1356
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2007
+      },
+      "spiral_32": {
+        "rect": [
+          438,
+          1235,
+          43,
+          119
+        ],
+        "pivot": [
+          25,
+          121
+        ],
+        "selection": [
+          426,
+          1225,
+          64,
+          137
+        ],
+        "source_anchor": [
+          463,
+          1356
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1988
+      },
+      "spiral_33": {
+        "rect": [
+          498,
+          1235,
+          43,
+          119
+        ],
+        "pivot": [
+          25,
+          121
+        ],
+        "selection": [
+          490,
+          1225,
+          60,
+          137
+        ],
+        "source_anchor": [
+          523,
+          1356
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1977
+      },
+      "spiral_34": {
+        "rect": [
+          557,
+          1234,
+          43,
+          119
+        ],
+        "pivot": [
+          25,
+          122
+        ],
+        "selection": [
+          550,
+          1225,
+          63,
+          137
+        ],
+        "source_anchor": [
+          582,
+          1356
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1954
+      }
+    },
+    "animations": {
+      "idle": {
+        "frames": [
+          "idle_side"
+        ],
+        "fps": 3,
+        "loop": true
+      },
+      "run": {
+        "frames": [
+          "walk_0",
+          "walk_1",
+          "walk_2",
+          "walk_3",
+          "walk_4",
+          "walk_5"
+        ],
+        "fps": 12,
+        "loop": true
+      },
+      "jump": {
+        "frames": [
+          "jump_a",
+          "jump_b",
+          "jump_c"
+        ],
+        "fps": 12,
+        "loop": false
+      },
+      "fall": {
+        "frames": [
+          "jump_c"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "dash": {
+        "frames": [
+          "dash"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "attack": {
+        "frames": [
+          "punch_a",
+          "punch_b",
+          "kick_a",
+          "kick_b"
+        ],
+        "fps": 18,
+        "loop": false
+      },
+      "cast": {
+        "frames": [
+          "cast_a",
+          "cast_b",
+          "cast_c",
+          "cast_d"
+        ],
+        "fps": 12,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          "hurt_a",
+          "hurt_b"
+        ],
+        "fps": 10,
+        "loop": false
+      },
+      "land": {
+        "frames": [
+          "jump_a",
+          "idle_side"
+        ],
+        "fps": 16,
+        "loop": false
+      },
+      "walk": {
+        "frames": [
+          "walk_0",
+          "walk_1",
+          "walk_2",
+          "walk_3",
+          "walk_4",
+          "walk_5"
+        ],
+        "fps": 9,
+        "loop": true
+      },
+      "special_cast": {
+        "frames": [
+          "spiral_00",
+          "spiral_01",
+          "spiral_02",
+          "spiral_03",
+          "spiral_04",
+          "spiral_05",
+          "spiral_06",
+          "spiral_07",
+          "spiral_08",
+          "spiral_09",
+          "spiral_10",
+          "spiral_11",
+          "spiral_12",
+          "spiral_13",
+          "spiral_14",
+          "spiral_15",
+          "spiral_16",
+          "spiral_17",
+          "spiral_18",
+          "spiral_19",
+          "spiral_20",
+          "spiral_21",
+          "spiral_22",
+          "spiral_23",
+          "spiral_24",
+          "spiral_25",
+          "spiral_26",
+          "spiral_27",
+          "spiral_28",
+          "spiral_29",
+          "spiral_30",
+          "spiral_31",
+          "spiral_32",
+          "spiral_33",
+          "spiral_34"
+        ],
+        "fps": 14.583333333333334,
+        "loop": false
+      }
+    }
+  },
+  "beryl": {
+    "sheet": "res://assets/sprites/snes/queen_beryl.png",
+    "canvas": [
+      160,
+      160
+    ],
+    "frames": {
+      "walk_0": {
+        "rect": [
+          24,
+          147,
+          68,
+          107
+        ],
+        "pivot": [
+          36,
+          107
+        ],
+        "selection": [
+          21,
+          144,
+          66,
+          113
+        ],
+        "source_anchor": [
+          60,
+          254
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1985
+      },
+      "walk_1": {
+        "rect": [
+          98,
+          149,
+          64,
+          107
+        ],
+        "pivot": [
+          39,
+          105
+        ],
+        "selection": [
+          96,
+          144,
+          67,
+          113
+        ],
+        "source_anchor": [
+          137,
+          254
+        ],
+        "exclusions": [],
+        "source_pixel_count": 2015
+      },
+      "walk_2": {
+        "rect": [
+          176,
+          147,
+          68,
+          107
+        ],
+        "pivot": [
+          40,
+          107
+        ],
+        "selection": [
+          174,
+          144,
+          68,
+          113
+        ],
+        "source_anchor": [
+          216,
+          254
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1964
+      },
+      "walk_3": {
+        "rect": [
+          261,
+          146,
+          61,
+          107
+        ],
+        "pivot": [
+          34,
+          108
+        ],
+        "selection": [
+          256,
+          144,
+          65,
+          113
+        ],
+        "source_anchor": [
+          295,
+          254
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1920
+      },
+      "walk_4": {
+        "rect": [
+          339,
+          146,
+          63,
+          108
+        ],
+        "pivot": [
+          36,
+          108
+        ],
+        "selection": [
+          335,
+          144,
+          66,
+          113
+        ],
+        "source_anchor": [
+          375,
+          254
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1901
+      },
+      "walk_5": {
+        "rect": [
+          417,
+          145,
+          64,
+          108
+        ],
+        "pivot": [
+          37,
+          109
+        ],
+        "selection": [
+          414,
+          144,
+          70,
+          113
+        ],
+        "source_anchor": [
+          454,
+          254
+        ],
+        "exclusions": [],
+        "source_pixel_count": 2045
+      },
+      "idle_a": {
+        "rect": [
+          286,
+          33,
+          60,
+          92
+        ],
+        "pivot": [
+          30,
+          92
+        ],
+        "selection": [
+          282,
+          29,
+          63,
+          98
+        ],
+        "source_anchor": [
+          316,
+          125
+        ],
+        "exclusions": [],
+        "source_pixel_count": 2317
+      },
+      "idle_b": {
+        "rect": [
+          367,
+          33,
+          60,
+          92
+        ],
+        "pivot": [
+          29,
+          92
+        ],
+        "selection": [
+          365,
+          29,
+          65,
+          98
+        ],
+        "source_anchor": [
+          396,
+          125
+        ],
+        "exclusions": [],
+        "source_pixel_count": 2329
+      },
+      "idle_c": {
+        "rect": [
+          449,
+          33,
+          60,
+          92
+        ],
+        "pivot": [
+          28,
+          92
+        ],
+        "selection": [
+          446,
+          29,
+          65,
+          98
+        ],
+        "source_anchor": [
+          477,
+          125
+        ],
+        "exclusions": [],
+        "source_pixel_count": 2309
+      },
+      "cast_a": {
+        "rect": [
+          104,
+          282,
+          60,
+          114
+        ],
+        "pivot": [
+          32,
+          118
+        ],
+        "selection": [
+          100,
+          266,
+          66,
+          137
+        ],
+        "source_anchor": [
+          136,
+          400
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1999
+      },
+      "cast_b": {
+        "rect": [
+          187,
+          265,
+          83,
+          133
+        ],
+        "pivot": [
+          36,
+          135
+        ],
+        "selection": [
+          176,
+          261,
+          94,
+          142
+        ],
+        "source_anchor": [
+          223,
+          400
+        ],
+        "exclusions": [],
+        "source_pixel_count": 2419
+      },
+      "cast_c": {
+        "rect": [
+          415,
+          274,
+          64,
+          126
+        ],
+        "pivot": [
+          31,
+          126
+        ],
+        "selection": [
+          414,
+          270,
+          62,
+          133
+        ],
+        "source_anchor": [
+          446,
+          400
+        ],
+        "exclusions": [],
+        "source_pixel_count": 2143
+      },
+      "hurt_a": {
+        "rect": [
+          35,
+          433,
+          71,
+          101
+        ],
+        "pivot": [
+          42,
+          102
+        ],
+        "selection": [
+          29,
+          431,
+          77,
+          107
+        ],
+        "source_anchor": [
+          77,
+          535
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1896
+      },
+      "hurt_b": {
+        "rect": [
+          110,
+          439,
+          69,
+          94
+        ],
+        "pivot": [
+          41,
+          96
+        ],
+        "selection": [
+          111,
+          432,
+          69,
+          106
+        ],
+        "source_anchor": [
+          151,
+          535
+        ],
+        "exclusions": [],
+        "source_pixel_count": 1803
+      }
+    },
+    "animations": {
+      "idle": {
+        "frames": [
+          "idle_a",
+          "idle_b",
+          "idle_c"
+        ],
+        "fps": 4,
+        "loop": true
+      },
+      "run": {
+        "frames": [
+          "walk_0",
+          "walk_1",
+          "walk_2",
+          "walk_3",
+          "walk_4",
+          "walk_5"
+        ],
+        "fps": 10,
+        "loop": true
+      },
+      "attack": {
+        "frames": [
+          "cast_a",
+          "cast_b",
+          "cast_c"
+        ],
+        "fps": 10,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          "hurt_a",
+          "hurt_b"
+        ],
+        "fps": 10,
+        "loop": false
+      }
+    }
+  },
+  "mercury": {
+    "sheet": "res://assets/sprites/snes/sailor_mercury.png",
+    "color_key": "#80ffff",
+    "canvas": [
+      200,
+      200
+    ],
+    "frames": {
+      "idle_side": {
+        "rect": [
+          21,
+          7,
+          31,
+          96
+        ],
+        "pivot": [
+          14,
+          95
+        ],
+        "selection": [
+          3,
+          1,
+          54,
+          109
+        ],
+        "source_anchor": [
+          35,
+          102
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1394
+      },
+      "walk_0": {
+        "rect": [
+          308,
+          10,
+          28,
+          95
+        ],
+        "pivot": [
+          14,
+          94
+        ],
+        "selection": [
+          296,
+          1,
+          54,
+          110
+        ],
+        "source_anchor": [
+          322,
+          104
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1408
+      },
+      "walk_1": {
+        "rect": [
+          363,
+          9,
+          24,
+          96
+        ],
+        "pivot": [
+          11,
+          95
+        ],
+        "selection": [
+          350,
+          1,
+          56,
+          110
+        ],
+        "source_anchor": [
+          374,
+          104
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1249
+      },
+      "walk_2": {
+        "rect": [
+          420,
+          9,
+          24,
+          96
+        ],
+        "pivot": [
+          12,
+          95
+        ],
+        "selection": [
+          406,
+          1,
+          55,
+          110
+        ],
+        "source_anchor": [
+          432,
+          104
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1325
+      },
+      "walk_3": {
+        "rect": [
+          472,
+          10,
+          32,
+          95
+        ],
+        "pivot": [
+          16,
+          94
+        ],
+        "selection": [
+          461,
+          1,
+          55,
+          110
+        ],
+        "source_anchor": [
+          488,
+          104
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1285
+      },
+      "walk_4": {
+        "rect": [
+          530,
+          10,
+          23,
+          95
+        ],
+        "pivot": [
+          12,
+          94
+        ],
+        "selection": [
+          516,
+          1,
+          54,
+          110
+        ],
+        "source_anchor": [
+          542,
+          104
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1179
+      },
+      "walk_5": {
+        "rect": [
+          583,
+          11,
+          21,
+          95
+        ],
+        "pivot": [
+          11,
+          94
+        ],
+        "selection": [
+          570,
+          1,
+          37,
+          110
+        ],
+        "source_anchor": [
+          594,
+          105
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1293
+      },
+      "attack_0": {
+        "rect": [
+          165,
+          7,
+          41,
+          98
+        ],
+        "pivot": [
+          23,
+          97
+        ],
+        "selection": [
+          162,
+          1,
+          58,
+          109
+        ],
+        "source_anchor": [
+          188,
+          104
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1609
+      },
+      "attack_1": {
+        "rect": [
+          227,
+          8,
+          60,
+          96
+        ],
+        "pivot": [
+          23,
+          95
+        ],
+        "selection": [
+          225,
+          1,
+          69,
+          109
+        ],
+        "source_anchor": [
+          250,
+          103
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1643
+      },
+      "attack_2": {
+        "rect": [
+          301,
+          314,
+          43,
+          95
+        ],
+        "pivot": [
+          31,
+          94
+        ],
+        "selection": [
+          295,
+          302,
+          59,
+          111
+        ],
+        "source_anchor": [
+          332,
+          408
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1442
+      },
+      "attack_3": {
+        "rect": [
+          492,
+          314,
+          72,
+          95
+        ],
+        "pivot": [
+          8,
+          94
+        ],
+        "selection": [
+          480,
+          302,
+          92,
+          111
+        ],
+        "source_anchor": [
+          500,
+          408
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1476
+      },
+      "cast_0": {
+        "rect": [
+          34,
+          160,
+          48,
+          89
+        ],
+        "pivot": [
+          14,
+          88
+        ],
+        "selection": [
+          25,
+          154,
+          64,
+          104
+        ],
+        "source_anchor": [
+          48,
+          248
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1457
+      },
+      "cast_1": {
+        "rect": [
+          113,
+          160,
+          54,
+          89
+        ],
+        "pivot": [
+          13,
+          88
+        ],
+        "selection": [
+          104,
+          154,
+          65,
+          104
+        ],
+        "source_anchor": [
+          126,
+          248
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1494
+      },
+      "cast_2": {
+        "rect": [
+          193,
+          163,
+          27,
+          88
+        ],
+        "pivot": [
+          12,
+          87
+        ],
+        "selection": [
+          185,
+          154,
+          40,
+          104
+        ],
+        "source_anchor": [
+          205,
+          250
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1235
+      },
+      "cast_3": {
+        "rect": [
+          241,
+          163,
+          53,
+          89
+        ],
+        "pivot": [
+          39,
+          88
+        ],
+        "selection": [
+          238,
+          154,
+          61,
+          104
+        ],
+        "source_anchor": [
+          280,
+          251
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1495
+      },
+      "cast_4": {
+        "rect": [
+          332,
+          165,
+          27,
+          88
+        ],
+        "pivot": [
+          12,
+          87
+        ],
+        "selection": [
+          326,
+          154,
+          43,
+          104
+        ],
+        "source_anchor": [
+          344,
+          252
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1331
+      },
+      "cast_5": {
+        "rect": [
+          407,
+          165,
+          28,
+          88
+        ],
+        "pivot": [
+          13,
+          87
+        ],
+        "selection": [
+          399,
+          154,
+          51,
+          104
+        ],
+        "source_anchor": [
+          420,
+          252
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1367
+      },
+      "cast_6": {
+        "rect": [
+          480,
+          158,
+          39,
+          95
+        ],
+        "pivot": [
+          27,
+          94
+        ],
+        "selection": [
+          478,
+          154,
+          45,
+          104
+        ],
+        "source_anchor": [
+          507,
+          252
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1328
+      },
+      "jump_0": {
+        "rect": [
+          52,
+          1099,
+          36,
+          92
+        ],
+        "pivot": [
+          15,
+          91
+        ],
+        "selection": [
+          43,
+          1081,
+          48,
+          121
+        ],
+        "source_anchor": [
+          67,
+          1190
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1298
+      },
+      "jump_1": {
+        "rect": [
+          100,
+          1101,
+          30,
+          59
+        ],
+        "pivot": [
+          6,
+          58
+        ],
+        "selection": [
+          93,
+          1081,
+          46,
+          121
+        ],
+        "source_anchor": [
+          106,
+          1159
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1131
+      },
+      "jump_2": {
+        "rect": [
+          143,
+          1099,
+          52,
+          98
+        ],
+        "pivot": [
+          18,
+          97
+        ],
+        "selection": [
+          141,
+          1081,
+          57,
+          121
+        ],
+        "source_anchor": [
+          161,
+          1196
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1498
+      },
+      "original_special_0": {
+        "rect": [
+          235,
+          924,
+          28,
+          88
+        ],
+        "pivot": [
+          13,
+          87
+        ],
+        "selection": [
+          229,
+          914,
+          47,
+          106
+        ],
+        "source_anchor": [
+          248,
+          1011
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1354
+      },
+      "original_special_1": {
+        "rect": [
+          317,
+          850,
+          76,
+          167
+        ],
+        "pivot": [
+          37,
+          166
+        ],
+        "selection": [
+          308,
+          840,
+          94,
+          182
+        ],
+        "source_anchor": [
+          354,
+          1016
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 3957
+      },
+      "hurt_0": {
+        "rect": [
+          16,
+          685,
+          36,
+          92
+        ],
+        "pivot": [
+          14,
+          91
+        ],
+        "selection": [
+          8,
+          677,
+          50,
+          106
+        ],
+        "source_anchor": [
+          30,
+          776
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1406
+      }
+    },
+    "animations": {
+      "idle": {
+        "frames": [
+          "idle_side"
+        ],
+        "fps": 3,
+        "loop": true
+      },
+      "walk": {
+        "frames": [
+          "walk_0",
+          "walk_1",
+          "walk_2",
+          "walk_3",
+          "walk_4",
+          "walk_5"
+        ],
+        "fps": 9,
+        "loop": true
+      },
+      "run": {
+        "frames": [
+          "walk_0",
+          "walk_1",
+          "walk_2",
+          "walk_3",
+          "walk_4",
+          "walk_5"
+        ],
+        "fps": 12,
+        "loop": true
+      },
+      "attack": {
+        "frames": [
+          "attack_0",
+          "attack_1",
+          "attack_2",
+          "attack_3"
+        ],
+        "fps": 16,
+        "loop": false
+      },
+      "cast": {
+        "frames": [
+          "cast_0",
+          "cast_1",
+          "cast_2",
+          "cast_3",
+          "cast_4",
+          "cast_5",
+          "cast_6"
+        ],
+        "fps": 14,
+        "loop": false
+      },
+      "jump": {
+        "frames": [
+          "jump_0",
+          "jump_1",
+          "jump_2"
+        ],
+        "fps": 12,
+        "loop": false
+      },
+      "fall": {
+        "frames": [
+          "jump_2"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "dash": {
+        "frames": [
+          "walk_2"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          "hurt_0"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "land": {
+        "frames": [
+          "jump_0",
+          "idle_side"
+        ],
+        "fps": 16,
+        "loop": false
+      },
+      "special_cast": {
+        "frames": [
+          "original_special_0",
+          "original_special_1"
+        ],
+        "fps": 0.8333333333333334,
+        "loop": false
+      }
+    }
+  },
+  "mars": {
+    "sheet": "res://assets/sprites/snes/sailor_mars.png",
+    "color_key": "#80ffff",
+    "canvas": [
+      200,
+      200
+    ],
+    "frames": {
+      "idle_side": {
+        "rect": [
+          14,
+          7,
+          38,
+          96
+        ],
+        "pivot": [
+          21,
+          95
+        ],
+        "selection": [
+          3,
+          1,
+          54,
+          109
+        ],
+        "source_anchor": [
+          35,
+          102
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1818
+      },
+      "walk_0": {
+        "rect": [
+          306,
+          10,
+          29,
+          95
+        ],
+        "pivot": [
+          15,
+          94
+        ],
+        "selection": [
+          296,
+          1,
+          54,
+          110
+        ],
+        "source_anchor": [
+          321,
+          104
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1666
+      },
+      "walk_1": {
+        "rect": [
+          363,
+          9,
+          24,
+          96
+        ],
+        "pivot": [
+          11,
+          95
+        ],
+        "selection": [
+          350,
+          1,
+          56,
+          110
+        ],
+        "source_anchor": [
+          374,
+          104
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1493
+      },
+      "walk_2": {
+        "rect": [
+          417,
+          9,
+          26,
+          96
+        ],
+        "pivot": [
+          13,
+          95
+        ],
+        "selection": [
+          406,
+          1,
+          55,
+          110
+        ],
+        "source_anchor": [
+          430,
+          104
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1559
+      },
+      "walk_3": {
+        "rect": [
+          472,
+          10,
+          32,
+          95
+        ],
+        "pivot": [
+          16,
+          94
+        ],
+        "selection": [
+          461,
+          1,
+          55,
+          110
+        ],
+        "source_anchor": [
+          488,
+          104
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1504
+      },
+      "walk_4": {
+        "rect": [
+          529,
+          9,
+          24,
+          95
+        ],
+        "pivot": [
+          13,
+          94
+        ],
+        "selection": [
+          516,
+          1,
+          54,
+          110
+        ],
+        "source_anchor": [
+          542,
+          103
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1479
+      },
+      "walk_5": {
+        "rect": [
+          579,
+          9,
+          25,
+          95
+        ],
+        "pivot": [
+          15,
+          94
+        ],
+        "selection": [
+          570,
+          1,
+          37,
+          110
+        ],
+        "source_anchor": [
+          594,
+          103
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1620
+      },
+      "attack_0": {
+        "rect": [
+          162,
+          8,
+          46,
+          95
+        ],
+        "pivot": [
+          14,
+          94
+        ],
+        "selection": [
+          160,
+          1,
+          53,
+          109
+        ],
+        "source_anchor": [
+          176,
+          102
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1913
+      },
+      "attack_1": {
+        "rect": [
+          215,
+          9,
+          78,
+          95
+        ],
+        "pivot": [
+          15,
+          94
+        ],
+        "selection": [
+          214,
+          1,
+          80,
+          109
+        ],
+        "source_anchor": [
+          230,
+          103
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2046
+      },
+      "attack_2": {
+        "rect": [
+          212,
+          313,
+          42,
+          95
+        ],
+        "pivot": [
+          24,
+          94
+        ],
+        "selection": [
+          210,
+          302,
+          47,
+          108
+        ],
+        "source_anchor": [
+          236,
+          407
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1767
+      },
+      "attack_3": {
+        "rect": [
+          259,
+          314,
+          72,
+          95
+        ],
+        "pivot": [
+          19,
+          94
+        ],
+        "selection": [
+          256,
+          302,
+          77,
+          109
+        ],
+        "source_anchor": [
+          278,
+          408
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2027
+      },
+      "cast_0": {
+        "rect": [
+          34,
+          161,
+          46,
+          92
+        ],
+        "pivot": [
+          16,
+          91
+        ],
+        "selection": [
+          26,
+          154,
+          59,
+          105
+        ],
+        "source_anchor": [
+          50,
+          252
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1739
+      },
+      "cast_1": {
+        "rect": [
+          112,
+          163,
+          48,
+          92
+        ],
+        "pivot": [
+          16,
+          91
+        ],
+        "selection": [
+          105,
+          154,
+          59,
+          105
+        ],
+        "source_anchor": [
+          128,
+          254
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1764
+      },
+      "cast_2": {
+        "rect": [
+          171,
+          161,
+          48,
+          92
+        ],
+        "pivot": [
+          17,
+          91
+        ],
+        "selection": [
+          166,
+          154,
+          59,
+          105
+        ],
+        "source_anchor": [
+          188,
+          252
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1765
+      },
+      "cast_3": {
+        "rect": [
+          244,
+          160,
+          48,
+          92
+        ],
+        "pivot": [
+          16,
+          91
+        ],
+        "selection": [
+          239,
+          154,
+          58,
+          105
+        ],
+        "source_anchor": [
+          260,
+          251
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1765
+      },
+      "jump_0": {
+        "rect": [
+          50,
+          1096,
+          32,
+          96
+        ],
+        "pivot": [
+          17,
+          95
+        ],
+        "selection": [
+          44,
+          1080,
+          41,
+          121
+        ],
+        "source_anchor": [
+          67,
+          1191
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1636
+      },
+      "jump_1": {
+        "rect": [
+          93,
+          1101,
+          36,
+          63
+        ],
+        "pivot": [
+          13,
+          62
+        ],
+        "selection": [
+          90,
+          1080,
+          46,
+          121
+        ],
+        "source_anchor": [
+          106,
+          1163
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1430
+      },
+      "original_special_0": {
+        "rect": [
+          236,
+          923,
+          38,
+          92
+        ],
+        "pivot": [
+          18,
+          91
+        ],
+        "selection": [
+          229,
+          912,
+          53,
+          111
+        ],
+        "source_anchor": [
+          254,
+          1014
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1654
+      },
+      "original_special_1": {
+        "rect": [
+          339,
+          903,
+          83,
+          114
+        ],
+        "pivot": [
+          19,
+          113
+        ],
+        "selection": [
+          332,
+          893,
+          97,
+          130
+        ],
+        "source_anchor": [
+          358,
+          1016
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2035
+      },
+      "hurt_0": {
+        "rect": [
+          12,
+          687,
+          43,
+          92
+        ],
+        "pivot": [
+          26,
+          91
+        ],
+        "selection": [
+          5,
+          678,
+          54,
+          106
+        ],
+        "source_anchor": [
+          38,
+          778
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1828
+      }
+    },
+    "animations": {
+      "idle": {
+        "frames": [
+          "idle_side"
+        ],
+        "fps": 3,
+        "loop": true
+      },
+      "walk": {
+        "frames": [
+          "walk_0",
+          "walk_1",
+          "walk_2",
+          "walk_3",
+          "walk_4",
+          "walk_5"
+        ],
+        "fps": 9,
+        "loop": true
+      },
+      "run": {
+        "frames": [
+          "walk_0",
+          "walk_1",
+          "walk_2",
+          "walk_3",
+          "walk_4",
+          "walk_5"
+        ],
+        "fps": 12,
+        "loop": true
+      },
+      "attack": {
+        "frames": [
+          "attack_0",
+          "attack_1",
+          "attack_2",
+          "attack_3"
+        ],
+        "fps": 16,
+        "loop": false
+      },
+      "cast": {
+        "frames": [
+          "cast_0",
+          "cast_1",
+          "cast_2",
+          "cast_3"
+        ],
+        "fps": 14,
+        "loop": false
+      },
+      "jump": {
+        "frames": [
+          "jump_0",
+          "jump_1"
+        ],
+        "fps": 12,
+        "loop": false
+      },
+      "fall": {
+        "frames": [
+          "jump_1"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "dash": {
+        "frames": [
+          "walk_2"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          "hurt_0"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "land": {
+        "frames": [
+          "jump_0",
+          "idle_side"
+        ],
+        "fps": 16,
+        "loop": false
+      },
+      "special_cast": {
+        "frames": [
+          "original_special_0",
+          "original_special_1"
+        ],
+        "fps": 0.8333333333333334,
+        "loop": false
+      }
+    }
+  },
+  "jupiter": {
+    "sheet": "res://assets/sprites/snes/sailor_jupiter.png",
+    "color_key": "#80ffff",
+    "canvas": [
+      200,
+      200
+    ],
+    "frames": {
+      "idle_side": {
+        "rect": [
+          16,
+          5,
+          34,
+          103
+        ],
+        "pivot": [
+          14,
+          102
+        ],
+        "selection": [
+          3,
+          1,
+          54,
+          109
+        ],
+        "source_anchor": [
+          30,
+          107
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1690
+      },
+      "walk_0": {
+        "rect": [
+          305,
+          5,
+          32,
+          103
+        ],
+        "pivot": [
+          17,
+          102
+        ],
+        "selection": [
+          296,
+          1,
+          54,
+          110
+        ],
+        "source_anchor": [
+          322,
+          107
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1739
+      },
+      "walk_1": {
+        "rect": [
+          362,
+          4,
+          26,
+          104
+        ],
+        "pivot": [
+          12,
+          103
+        ],
+        "selection": [
+          350,
+          1,
+          56,
+          110
+        ],
+        "source_anchor": [
+          374,
+          107
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1509
+      },
+      "walk_2": {
+        "rect": [
+          418,
+          4,
+          27,
+          104
+        ],
+        "pivot": [
+          14,
+          103
+        ],
+        "selection": [
+          406,
+          1,
+          55,
+          110
+        ],
+        "source_anchor": [
+          432,
+          107
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1571
+      },
+      "walk_3": {
+        "rect": [
+          472,
+          5,
+          34,
+          103
+        ],
+        "pivot": [
+          16,
+          102
+        ],
+        "selection": [
+          461,
+          1,
+          55,
+          110
+        ],
+        "source_anchor": [
+          488,
+          107
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1533
+      },
+      "walk_4": {
+        "rect": [
+          528,
+          5,
+          26,
+          103
+        ],
+        "pivot": [
+          14,
+          102
+        ],
+        "selection": [
+          516,
+          1,
+          54,
+          110
+        ],
+        "source_anchor": [
+          542,
+          107
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1500
+      },
+      "walk_5": {
+        "rect": [
+          574,
+          4,
+          27,
+          103
+        ],
+        "pivot": [
+          16,
+          102
+        ],
+        "selection": [
+          570,
+          1,
+          37,
+          110
+        ],
+        "source_anchor": [
+          590,
+          106
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1643
+      },
+      "attack_0": {
+        "rect": [
+          171,
+          5,
+          36,
+          102
+        ],
+        "pivot": [
+          17,
+          101
+        ],
+        "selection": [
+          166,
+          1,
+          50,
+          111
+        ],
+        "source_anchor": [
+          188,
+          106
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1636
+      },
+      "attack_1": {
+        "rect": [
+          229,
+          5,
+          57,
+          101
+        ],
+        "pivot": [
+          17,
+          100
+        ],
+        "selection": [
+          226,
+          1,
+          65,
+          111
+        ],
+        "source_anchor": [
+          246,
+          105
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1846
+      },
+      "attack_2": {
+        "rect": [
+          433,
+          320,
+          69,
+          102
+        ],
+        "pivot": [
+          19,
+          101
+        ],
+        "selection": [
+          429,
+          302,
+          76,
+          134
+        ],
+        "source_anchor": [
+          452,
+          421
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1954
+      },
+      "attack_3": {
+        "rect": [
+          507,
+          320,
+          40,
+          102
+        ],
+        "pivot": [
+          16,
+          101
+        ],
+        "selection": [
+          506,
+          302,
+          51,
+          134
+        ],
+        "source_anchor": [
+          523,
+          421
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1854
+      },
+      "cast_0": {
+        "rect": [
+          68,
+          155,
+          35,
+          110
+        ],
+        "pivot": [
+          17,
+          109
+        ],
+        "selection": [
+          62,
+          154,
+          47,
+          115
+        ],
+        "source_anchor": [
+          85,
+          264
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1823
+      },
+      "cast_1": {
+        "rect": [
+          116,
+          159,
+          35,
+          104
+        ],
+        "pivot": [
+          17,
+          103
+        ],
+        "selection": [
+          110,
+          154,
+          48,
+          115
+        ],
+        "source_anchor": [
+          133,
+          262
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1765
+      },
+      "cast_2": {
+        "rect": [
+          182,
+          160,
+          35,
+          98
+        ],
+        "pivot": [
+          16,
+          97
+        ],
+        "selection": [
+          175,
+          154,
+          51,
+          115
+        ],
+        "source_anchor": [
+          198,
+          257
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1685
+      },
+      "cast_3": {
+        "rect": [
+          233,
+          161,
+          35,
+          98
+        ],
+        "pivot": [
+          17,
+          97
+        ],
+        "selection": [
+          230,
+          154,
+          47,
+          115
+        ],
+        "source_anchor": [
+          250,
+          258
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1683
+      },
+      "cast_4": {
+        "rect": [
+          284,
+          161,
+          35,
+          98
+        ],
+        "pivot": [
+          16,
+          97
+        ],
+        "selection": [
+          278,
+          154,
+          50,
+          115
+        ],
+        "source_anchor": [
+          300,
+          258
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1687
+      },
+      "cast_5": {
+        "rect": [
+          330,
+          161,
+          35,
+          98
+        ],
+        "pivot": [
+          16,
+          97
+        ],
+        "selection": [
+          329,
+          154,
+          46,
+          115
+        ],
+        "source_anchor": [
+          346,
+          258
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1687
+      },
+      "cast_6": {
+        "rect": [
+          376,
+          160,
+          52,
+          105
+        ],
+        "pivot": [
+          29,
+          104
+        ],
+        "selection": [
+          375,
+          154,
+          58,
+          115
+        ],
+        "source_anchor": [
+          405,
+          264
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1885
+      },
+      "jump_0": {
+        "rect": [
+          13,
+          1104,
+          55,
+          86
+        ],
+        "pivot": [
+          29,
+          85
+        ],
+        "selection": [
+          6,
+          1080,
+          73,
+          124
+        ],
+        "source_anchor": [
+          42,
+          1189
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1798
+      },
+      "jump_1": {
+        "rect": [
+          89,
+          1096,
+          37,
+          102
+        ],
+        "pivot": [
+          15,
+          101
+        ],
+        "selection": [
+          82,
+          1080,
+          49,
+          124
+        ],
+        "source_anchor": [
+          104,
+          1197
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1605
+      },
+      "original_special_0": {
+        "rect": [
+          135,
+          907,
+          57,
+          101
+        ],
+        "pivot": [
+          17,
+          100
+        ],
+        "selection": [
+          128,
+          899,
+          70,
+          121
+        ],
+        "source_anchor": [
+          152,
+          1007
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1846
+      },
+      "original_special_1": {
+        "rect": [
+          210,
+          908,
+          49,
+          101
+        ],
+        "pivot": [
+          23,
+          100
+        ],
+        "selection": [
+          202,
+          899,
+          65,
+          121
+        ],
+        "source_anchor": [
+          233,
+          1008
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1853
+      },
+      "original_special_2": {
+        "rect": [
+          279,
+          906,
+          48,
+          107
+        ],
+        "pivot": [
+          24,
+          106
+        ],
+        "selection": [
+          274,
+          899,
+          63,
+          121
+        ],
+        "source_anchor": [
+          303,
+          1012
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1916
+      },
+      "hurt_0": {
+        "rect": [
+          19,
+          680,
+          35,
+          101
+        ],
+        "pivot": [
+          16,
+          100
+        ],
+        "selection": [
+          10,
+          670,
+          55,
+          115
+        ],
+        "source_anchor": [
+          35,
+          780
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1688
+      }
+    },
+    "animations": {
+      "idle": {
+        "frames": [
+          "idle_side"
+        ],
+        "fps": 3,
+        "loop": true
+      },
+      "walk": {
+        "frames": [
+          "walk_0",
+          "walk_1",
+          "walk_2",
+          "walk_3",
+          "walk_4",
+          "walk_5"
+        ],
+        "fps": 9,
+        "loop": true
+      },
+      "run": {
+        "frames": [
+          "walk_0",
+          "walk_1",
+          "walk_2",
+          "walk_3",
+          "walk_4",
+          "walk_5"
+        ],
+        "fps": 12,
+        "loop": true
+      },
+      "attack": {
+        "frames": [
+          "attack_0",
+          "attack_1",
+          "attack_2",
+          "attack_3"
+        ],
+        "fps": 16,
+        "loop": false
+      },
+      "cast": {
+        "frames": [
+          "cast_0",
+          "cast_1",
+          "cast_2",
+          "cast_3",
+          "cast_4",
+          "cast_5",
+          "cast_6"
+        ],
+        "fps": 14,
+        "loop": false
+      },
+      "jump": {
+        "frames": [
+          "jump_0",
+          "jump_1"
+        ],
+        "fps": 12,
+        "loop": false
+      },
+      "fall": {
+        "frames": [
+          "jump_1"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "dash": {
+        "frames": [
+          "walk_2"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          "hurt_0"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "land": {
+        "frames": [
+          "jump_0",
+          "idle_side"
+        ],
+        "fps": 16,
+        "loop": false
+      },
+      "special_cast": {
+        "frames": [
+          "original_special_0",
+          "original_special_1",
+          "original_special_2"
+        ],
+        "fps": 1.25,
+        "loop": false
+      }
+    }
+  },
+  "venus": {
+    "sheet": "res://assets/sprites/snes/sailor_venus.png",
+    "color_key": "#80ffff",
+    "canvas": [
+      200,
+      200
+    ],
+    "frames": {
+      "idle_side": {
+        "rect": [
+          17,
+          5,
+          35,
+          98
+        ],
+        "pivot": [
+          17,
+          97
+        ],
+        "selection": [
+          3,
+          1,
+          54,
+          109
+        ],
+        "source_anchor": [
+          34,
+          102
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1731
+      },
+      "walk_0": {
+        "rect": [
+          268,
+          10,
+          33,
+          97
+        ],
+        "pivot": [
+          19,
+          96
+        ],
+        "selection": [
+          263,
+          1,
+          42,
+          110
+        ],
+        "source_anchor": [
+          287,
+          106
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1814
+      },
+      "walk_1": {
+        "rect": [
+          310,
+          9,
+          29,
+          97
+        ],
+        "pivot": [
+          18,
+          96
+        ],
+        "selection": [
+          305,
+          1,
+          42,
+          110
+        ],
+        "source_anchor": [
+          328,
+          105
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1817
+      },
+      "walk_2": {
+        "rect": [
+          353,
+          10,
+          32,
+          97
+        ],
+        "pivot": [
+          15,
+          96
+        ],
+        "selection": [
+          347,
+          1,
+          44,
+          110
+        ],
+        "source_anchor": [
+          368,
+          106
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1607
+      },
+      "walk_3": {
+        "rect": [
+          396,
+          9,
+          29,
+          98
+        ],
+        "pivot": [
+          17,
+          97
+        ],
+        "selection": [
+          391,
+          1,
+          42,
+          110
+        ],
+        "source_anchor": [
+          413,
+          106
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1721
+      },
+      "walk_4": {
+        "rect": [
+          438,
+          9,
+          27,
+          98
+        ],
+        "pivot": [
+          14,
+          97
+        ],
+        "selection": [
+          433,
+          1,
+          41,
+          110
+        ],
+        "source_anchor": [
+          452,
+          106
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1614
+      },
+      "walk_5": {
+        "rect": [
+          480,
+          9,
+          26,
+          97
+        ],
+        "pivot": [
+          16,
+          96
+        ],
+        "selection": [
+          474,
+          1,
+          40,
+          110
+        ],
+        "source_anchor": [
+          496,
+          105
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1603
+      },
+      "attack_0": {
+        "rect": [
+          186,
+          165,
+          74,
+          96
+        ],
+        "pivot": [
+          50,
+          95
+        ],
+        "selection": [
+          180,
+          155,
+          90,
+          108
+        ],
+        "source_anchor": [
+          236,
+          260
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2210
+      },
+      "attack_1": {
+        "rect": [
+          273,
+          165,
+          71,
+          96
+        ],
+        "pivot": [
+          49,
+          95
+        ],
+        "selection": [
+          271,
+          155,
+          74,
+          108
+        ],
+        "source_anchor": [
+          322,
+          260
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2138
+      },
+      "attack_2": {
+        "rect": [
+          346,
+          158,
+          83,
+          103
+        ],
+        "pivot": [
+          35,
+          102
+        ],
+        "selection": [
+          345,
+          154,
+          85,
+          109
+        ],
+        "source_anchor": [
+          381,
+          260
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2277
+      },
+      "attack_3": {
+        "rect": [
+          431,
+          167,
+          148,
+          94
+        ],
+        "pivot": [
+          35,
+          93
+        ],
+        "selection": [
+          430,
+          155,
+          155,
+          108
+        ],
+        "source_anchor": [
+          466,
+          260
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2238
+      },
+      "cast_0": {
+        "rect": [
+          1,
+          155,
+          34,
+          111
+        ],
+        "pivot": [
+          17,
+          110
+        ],
+        "selection": [
+          0,
+          154,
+          41,
+          114
+        ],
+        "source_anchor": [
+          18,
+          265
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1806
+      },
+      "cast_1": {
+        "rect": [
+          48,
+          170,
+          45,
+          96
+        ],
+        "pivot": [
+          20,
+          95
+        ],
+        "selection": [
+          43,
+          154,
+          60,
+          114
+        ],
+        "source_anchor": [
+          68,
+          265
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1815
+      },
+      "jump_0": {
+        "rect": [
+          29,
+          868,
+          37,
+          64
+        ],
+        "pivot": [
+          14,
+          63
+        ],
+        "selection": [
+          21,
+          849,
+          46,
+          102
+        ],
+        "source_anchor": [
+          43,
+          931
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1422
+      },
+      "jump_1": {
+        "rect": [
+          68,
+          868,
+          42,
+          76
+        ],
+        "pivot": [
+          20,
+          75
+        ],
+        "selection": [
+          67,
+          849,
+          51,
+          102
+        ],
+        "source_anchor": [
+          88,
+          943
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1631
+      },
+      "original_special_0": {
+        "rect": [
+          111,
+          679,
+          92,
+          95
+        ],
+        "pivot": [
+          47,
+          94
+        ],
+        "selection": [
+          106,
+          670,
+          101,
+          111
+        ],
+        "source_anchor": [
+          158,
+          773
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2112
+      },
+      "original_special_1": {
+        "rect": [
+          210,
+          675,
+          100,
+          96
+        ],
+        "pivot": [
+          36,
+          95
+        ],
+        "selection": [
+          207,
+          670,
+          107,
+          111
+        ],
+        "source_anchor": [
+          246,
+          770
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1958
+      },
+      "original_special_2": {
+        "rect": [
+          335,
+          675,
+          92,
+          96
+        ],
+        "pivot": [
+          37,
+          95
+        ],
+        "selection": [
+          331,
+          670,
+          98,
+          111
+        ],
+        "source_anchor": [
+          372,
+          770
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 2308
+      },
+      "original_special_3": {
+        "rect": [
+          436,
+          676,
+          101,
+          95
+        ],
+        "pivot": [
+          62,
+          94
+        ],
+        "selection": [
+          430,
+          670,
+          113,
+          111
+        ],
+        "source_anchor": [
+          498,
+          770
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1851
+      },
+      "hurt_0": {
+        "rect": [
+          15,
+          512,
+          36,
+          94
+        ],
+        "pivot": [
+          15,
+          93
+        ],
+        "selection": [
+          7,
+          500,
+          50,
+          111
+        ],
+        "source_anchor": [
+          30,
+          605
+        ],
+        "preserve_effects": true,
+        "exclusions": [],
+        "source_pixel_count": 1652
+      }
+    },
+    "animations": {
+      "idle": {
+        "frames": [
+          "idle_side"
+        ],
+        "fps": 3,
+        "loop": true
+      },
+      "walk": {
+        "frames": [
+          "walk_0",
+          "walk_1",
+          "walk_2",
+          "walk_3",
+          "walk_4",
+          "walk_5"
+        ],
+        "fps": 9,
+        "loop": true
+      },
+      "run": {
+        "frames": [
+          "walk_0",
+          "walk_1",
+          "walk_2",
+          "walk_3",
+          "walk_4",
+          "walk_5"
+        ],
+        "fps": 12,
+        "loop": true
+      },
+      "attack": {
+        "frames": [
+          "attack_0",
+          "attack_1",
+          "attack_2",
+          "attack_3"
+        ],
+        "fps": 16,
+        "loop": false
+      },
+      "cast": {
+        "frames": [
+          "cast_0",
+          "cast_1"
+        ],
+        "fps": 14,
+        "loop": false
+      },
+      "jump": {
+        "frames": [
+          "jump_0",
+          "jump_1"
+        ],
+        "fps": 12,
+        "loop": false
+      },
+      "fall": {
+        "frames": [
+          "jump_1"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "dash": {
+        "frames": [
+          "walk_2"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "hurt": {
+        "frames": [
+          "hurt_0"
+        ],
+        "fps": 8,
+        "loop": false
+      },
+      "land": {
+        "frames": [
+          "jump_0",
+          "idle_side"
+        ],
+        "fps": 16,
+        "loop": false
+      },
+      "special_cast": {
+        "frames": [
+          "original_special_0",
+          "original_special_1",
+          "original_special_2",
+          "original_special_3"
+        ],
+        "fps": 1.6666666666666667,
+        "loop": false
+      }
+    }
+  }
+}

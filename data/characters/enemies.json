@@ -1,0 +1,29 @@
+{
+  "wisp": {
+    "name": "Тень забытой звезды",
+    "max_hp": 54,
+    "max_mp": 0,
+    "attack": 15,
+    "defense": 5,
+    "speed": 9,
+    "weakness": "moon",
+    "skills": [
+      "shadow"
+    ],
+    "color": "#9078d1"
+  },
+  "sentinel": {
+    "name": "Страж затмения",
+    "max_hp": 160,
+    "max_mp": 0,
+    "attack": 22,
+    "defense": 10,
+    "speed": 11,
+    "weakness": "star",
+    "skills": [
+      "shadow",
+      "nightfall"
+    ],
+    "color": "#b28cda"
+  }
+}

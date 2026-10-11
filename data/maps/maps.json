@@ -1,0 +1,66 @@
+{
+  "sanctuary": {
+    "name": "Лунное святилище",
+    "region": "САДЫ СЕРЕБРЯНОГО ТЫСЯЧЕЛЕТИЯ",
+    "background": "res://assets/maps/sanctuary.svg",
+    "points": [
+      {
+        "id": "keeper",
+        "name": "Хранительница",
+        "icon": "✦",
+        "position": [
+          0.49,
+          0.57
+        ],
+        "interaction": "keeper"
+      },
+      {
+        "id": "chest",
+        "name": "Лунный ларец",
+        "icon": "◇",
+        "position": [
+          0.76,
+          0.73
+        ],
+        "interaction": "chest"
+      },
+      {
+        "id": "gate",
+        "name": "Врата сновидений",
+        "icon": "◇",
+        "position": [
+          0.22,
+          0.62
+        ],
+        "interaction": "gate"
+      }
+    ]
+  },
+  "dream": {
+    "name": "Сад сновидений",
+    "region": "ПО ТУ СТОРОНУ ЛУННОГО СВЕТА",
+    "background": "res://assets/maps/dream.svg",
+    "points": [
+      {
+        "id": "boss",
+        "name": "Страж затмения",
+        "icon": "✧",
+        "position": [
+          0.52,
+          0.56
+        ],
+        "interaction": "boss"
+      },
+      {
+        "id": "return",
+        "name": "В святилище",
+        "icon": "◇",
+        "position": [
+          0.24,
+          0.76
+        ],
+        "interaction": "return"
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "strike": {
+    "name": "Удар",
+    "description": "Надёжная атака без затрат маны.",
+    "kind": "damage",
+    "power": 1.0,
+    "cost": 0,
+    "element": "neutral",
+    "target": "enemy"
+  },
+  "moonbeam": {
+    "name": "Лунный луч",
+    "description": "Лунная магия. Сильна против теней.",
+    "kind": "damage",
+    "power": 1.65,
+    "cost": 6,
+    "element": "moon",
+    "target": "enemy"
+  },
+  "starfall": {
+    "name": "Звездопад",
+    "description": "Звёздная магия. Слабо место стража.",
+    "kind": "damage",
+    "power": 1.65,
+    "cost": 7,
+    "element": "star",
+    "target": "enemy"
+  },
+  "mend": {
+    "name": "Свет надежды",
+    "description": "Восстановить здоровье выбранной союзницы.",
+    "kind": "heal",
+    "power": 35,
+    "cost": 8,
+    "element": "moon",
+    "target": "ally"
+  },
+  "guard": {
+    "name": "Защита",
+    "description": "Уменьшить урон до следующего хода; +5 маны.",
+    "kind": "guard",
+    "power": 0,
+    "cost": 0,
+    "element": "neutral",
+    "target": "self"
+  },
+  "eclipse": {
+    "name": "Двойное сияние",
+    "description": "Командная атака. Требует обеих хранительниц и 100 резонанса.",
+    "kind": "damage",
+    "power": 4.0,
+    "cost": 0,
+    "element": "star",
+    "target": "all_enemies",
+    "ultimate": true
+  },
+  "shadow": {
+    "name": "Прикосновение тени",
+    "kind": "damage",
+    "power": 1.0,
+    "cost": 0,
+    "element": "dark",
+    "target": "enemy"
+  },
+  "nightfall": {
+    "name": "Ночная вуаль",
+    "kind": "damage",
+    "power": 1.3,
+    "cost": 0,
+    "element": "dark",
+    "target": "enemy"
+  }
+}

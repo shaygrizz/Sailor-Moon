@@ -1,0 +1,11 @@
+{
+  "eclipse": {
+    "name": "Страж затмения",
+    "enemies": [
+      "wisp",
+      "sentinel"
+    ],
+    "xp": 30,
+    "gold": 25
+  }
+}

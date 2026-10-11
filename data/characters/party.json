@@ -1,0 +1,56 @@
+{
+  "selene": {
+    "name": "Селена",
+    "role": "Хранительница луны",
+    "element": "moon",
+    "max_hp": 100,
+    "max_mp": 28,
+    "attack": 19,
+    "defense": 10,
+    "speed": 15,
+    "skills": [
+      "strike",
+      "moonbeam",
+      "mend",
+      "guard"
+    ],
+    "ultimate": "eclipse",
+    "portrait": "res://assets/portraits/selene.svg",
+    "color": "#efb5d0",
+    "equipment": [],
+    "passives": [],
+    "relationships": {},
+    "talents": [],
+    "costumes": [
+      "guardian"
+    ],
+    "unlock": "start"
+  },
+  "iris": {
+    "name": "Ирис",
+    "role": "Проводница звёзд",
+    "element": "star",
+    "max_hp": 86,
+    "max_mp": 32,
+    "attack": 17,
+    "defense": 8,
+    "speed": 12,
+    "skills": [
+      "strike",
+      "starfall",
+      "mend",
+      "guard"
+    ],
+    "ultimate": "eclipse",
+    "portrait": "res://assets/portraits/iris.svg",
+    "color": "#bfb7ef",
+    "equipment": [],
+    "passives": [],
+    "relationships": {},
+    "talents": [],
+    "costumes": [
+      "guardian"
+    ],
+    "unlock": "start"
+  }
+}

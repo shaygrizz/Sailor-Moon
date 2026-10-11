@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "catalogs": {
+    "config": "res://data/balancing/game.json",
+    "characters": "res://data/characters/party.json",
+    "enemies": "res://data/characters/enemies.json",
+    "skills": "res://data/skills/skills.json",
+    "items": "res://data/items/items.json",
+    "quests": "res://data/quests/quests.json",
+    "dialogues": "res://data/dialogues/story.json",
+    "maps": "res://data/maps/maps.json",
+    "encounters": "res://data/events/encounters.json",
+    "interactions": "res://data/events/interactions.json"
+  },
+  "mods": []
+}

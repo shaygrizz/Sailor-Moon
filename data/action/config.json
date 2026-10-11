@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "title": "SAILOR MOON",
+  "subtitle": "IN THE NAME OF THE MOON",
+  "initial_character": "moon",
+  "initial_level": "azabu",
+  "menu_art": "res://assets/art/main_menu.png",
+  "movement": {
+    "speed": 310,
+    "acceleration": 2400,
+    "friction": 2100,
+    "gravity": 1520,
+    "jump_speed": 565,
+    "jump_release_factor": 0.48,
+    "coyote_seconds": 0.11,
+    "jump_buffer_seconds": 0.13,
+    "max_fall_speed": 850,
+    "dash_speed": 820,
+    "dash_seconds": 0.16,
+    "dash_cooldown": 0.6,
+    "dash_invulnerability": true,
+    "wall_slide_speed": 110,
+    "wall_jump_x": 420,
+    "wall_jump_y": 520,
+    "air_jumps": 1
+  },
+  "combat": {
+    "melee_damage": 16,
+    "melee_range": 108,
+    "melee_cooldown": 0.27,
+    "melee_seconds": 0.24,
+    "combo_window": 0.7,
+    "combo_multipliers": [
+      1,
+      1.2,
+      1.6
+    ],
+    "hurt_invulnerability": 0.85,
+    "hurt_seconds": 0.22,
+    "knockback_x": 290,
+    "knockback_y": 230,
+    "energy_regen": 14,
+    "contact_damage": 12,
+    "hitstop": 0.045,
+    "effect_budget": 32,
+    "enemy_damage": 14,
+    "enemy_speed": 88,
+    "enemy_hp": 70,
+    "boss_hp": 280,
+    "enemy_attack_interval": 1.5,
+    "enemy_attack_range": 90,
+    "boss_projectile_speed": 270,
+    "boss_attack_interval": 1.8,
+    "projectile_radius": 14
+  },
+  "visual": {
+    "sprite_height": 108,
+    "camera_smoothing": 7,
+    "screen_shake": 7,
+    "idle_sway": 1.5,
+    "idle_fps": 4,
+    "run_fps": 18,
+    "cast_fps": 12,
+    "hurt_fps": 10,
+    "fade_seconds": 0.22,
+    "menu_slide_seconds": 0.35,
+    "jump_fps": 16,
+    "fall_fps": 8,
+    "attack_fps": 18,
+    "dash_fps": 16,
+    "land_fps": 16
+  },
+  "animation": {
+    "idle": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "run": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "jump": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "fall": [
+      26,
+      27
+    ],
+    "attack": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "cast": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "hurt": [
+      28,
+      29
+    ],
+    "dash": [
+      24,
+      25
+    ],
+    "land": [
+      30,
+      31
+    ]
+  },
+  "bindings": {
+    "left": [
+      "A",
+      "Left"
+    ],
+    "right": [
+      "D",
+      "Right"
+    ],
+    "jump": [
+      "Space",
+      "W",
+      "Up"
+    ],
+    "dash": [
+      "Shift"
+    ],
+    "attack": [
+      "J"
+    ],
+    "primary": [
+      "K",
+      "Q"
+    ],
+    "special": [
+      "L",
+      "E"
+    ],
+    "roster": [
+      "Tab"
+    ],
+    "pause": [
+      "Escape"
+    ]
+  }
+}

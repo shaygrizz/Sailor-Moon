@@ -1,0 +1,54 @@
+{
+  "master_volume": 0.65,
+  "music_volume": 0.75,
+  "sfx_volume": 0.6,
+  "crossfade_seconds": 0.55,
+  "tracks": {
+    "menu": {
+      "path": "res://assets/audio/music/exploration.wav",
+      "external": "Music/menu.ogg",
+      "loop": true,
+      "gain_db": -9
+    },
+    "exploration": {
+      "path": "res://assets/audio/music/exploration.wav",
+      "external": "Music/exploration.ogg",
+      "loop": true,
+      "gain_db": -9
+    },
+    "battle": {
+      "path": "res://assets/audio/music/battle.wav",
+      "external": "Music/battle.ogg",
+      "loop": true,
+      "gain_db": -8
+    },
+    "victory": {
+      "path": "res://assets/audio/music/exploration.wav",
+      "external": "Music/victory.ogg",
+      "loop": true,
+      "gain_db": -9
+    }
+  },
+  "sfx": {
+    "menu": {
+      "path": "res://assets/audio/sfx/chime.wav",
+      "external": "Music/menu_click.wav",
+      "gain_db": -10
+    },
+    "attack": {
+      "path": "res://assets/audio/sfx/chime.wav",
+      "external": "Music/attack.wav",
+      "gain_db": -15
+    },
+    "magic": {
+      "path": "res://assets/audio/sfx/chime.wav",
+      "external": "Music/magic.wav",
+      "gain_db": -8
+    },
+    "hurt": {
+      "path": "res://assets/audio/sfx/chime.wav",
+      "external": "Music/hurt.wav",
+      "gain_db": -12
+    }
+  }
+}

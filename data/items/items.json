@@ -1,0 +1,15 @@
+{
+  "stardrop": {
+    "name": "Звёздная капля",
+    "description": "Восстанавливает 45 HP одной союзнице в бою.",
+    "kind": "heal",
+    "power": 45,
+    "price": 15
+  },
+  "moonshard": {
+    "name": "Лунный осколок",
+    "description": "Открывает дорогу в сад сновидений.",
+    "kind": "key",
+    "price": 0
+  }
+}

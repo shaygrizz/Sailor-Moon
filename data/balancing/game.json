@@ -1,0 +1,77 @@
+{
+  "title": "MOONVEIL",
+  "subtitle": "THE FIRST STAR",
+  "schema_version": 2,
+  "initial_map": "sanctuary",
+  "initial_party": [
+    "selene",
+    "iris"
+  ],
+  "initial_inventory": {
+    "stardrop": 3
+  },
+  "initial_gold": 0,
+  "initial_quest": "first_star",
+  "save_slots": 3,
+  "world": {
+    "speed": 0.28,
+    "arrival_distance": 0.024,
+    "interact_distance": 0.09,
+    "player_spawn": [
+      0.49,
+      0.79
+    ],
+    "bounds": [
+      0.13,
+      0.49,
+      0.86,
+      0.9
+    ]
+  },
+  "battle": {
+    "defense_factor": 0.45,
+    "minimum_damage": 1,
+    "variance": [
+      0.93,
+      1.07
+    ],
+    "critical_chance": 0.1,
+    "critical_multiplier": 1.5,
+    "weakness_multiplier": 1.6,
+    "guard_multiplier": 0.45,
+    "guard_mana": 5,
+    "ultimate_cost": 100,
+    "gauge_per_hit": 17,
+    "turn_delay": 0.75,
+    "max_rounds": 100,
+    "start_gauge": 0,
+    "level_thresholds": [
+      0,
+      25,
+      65,
+      130
+    ],
+    "level_growth": {
+      "max_hp": 12,
+      "max_mp": 3,
+      "attack": 3,
+      "defense": 2,
+      "speed": 1
+    }
+  },
+  "presentation": {
+    "transition_seconds": 0.22,
+    "particle_count": 28,
+    "particle_speed": 12,
+    "music_volume_db": -23,
+    "sfx_volume_db": -16,
+    "palette": {
+      "background": "#0c1025",
+      "panel": "#151a34",
+      "gold": "#dfc99c",
+      "text": "#f5edee",
+      "muted": "#aaaec9",
+      "accent": "#e8a7c6"
+    }
+  }
+}
