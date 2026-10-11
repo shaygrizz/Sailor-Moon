@@ -8,9 +8,12 @@ signal feedback(kind: String)
 const Atlas = preload("res://scripts/action/atlas.gd")
 const SnesAtlas = preload("res://scripts/action/snes_atlas.gd")
 const Motion = preload("res://scripts/action/guardian_motion.gd")
+const Style = preload("res://scripts/action/style.gd")
 var db
 var actor: Dictionary
 var sprite: AnimatedSprite2D
+## Additive layer for slashes, dash trails and the focus ring, drawn above the sprite.
+var fx: Node2D
 ## Health is counted in whole hearts, like masks: every hit costs exactly one.
 var hp: float
 var max_hp: int
@@ -71,6 +74,11 @@ func configure(database, id: String, is_practice: bool) -> void:
 	sprite = AnimatedSprite2D.new()
 	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	add_child(sprite)
+	fx = Node2D.new()
+	fx.material = Style.additive()
+	fx.z_index = 1
+	fx.draw.connect(_draw_fx)
+	add_child(fx)
 	_set_art()
 
 func _set_art() -> void:
@@ -186,6 +194,7 @@ func _physics_process(delta: float) -> void:
 	sprite.modulate = Color(1.0, 0.85 + 0.15 * sin(clock * 30), 1.0) if focus_left > 0 else Color.WHITE
 	sprite.modulate.a = 0.4 if invulnerable > 0 and int(clock * 18) % 2 == 0 else 1.0
 	queue_redraw()
+	fx.queue_redraw()
 
 ## Hold focus on the ground to turn stored energy into one heart. Any hit interrupts it.
 func _update_focus(delta: float) -> void:
@@ -312,21 +321,30 @@ func hazard_hit() -> bool:
 	return true
 
 func _draw() -> void:
+	var lift = 0.0 if is_on_floor() else 0.5
+	draw_set_transform(Vector2(0, -1), 0, Vector2(1, 0.26))
+	draw_circle(Vector2.ZERO, 24 * (1 - lift * 0.4), Color(0.02, 0.0, 0.08, 0.42 * (1 - lift)))
+	draw_set_transform(Vector2.ZERO)
+
+func _draw_fx() -> void:
+	var tint = Color(actor.color)
 	if dash_left > 0:
-		for i in range(4):
-			draw_line(Vector2(-facing * (20 + i * 17), -25 - i * 12), Vector2(-facing * (75 + i * 20), -25 - i * 12), Color(actor.color, 0.4 - i * 0.08), 3)
+		for i in range(5):
+			var y = -22 - i * 11
+			fx.draw_line(Vector2(-facing * (14 + i * 10), y), Vector2(-facing * (90 + i * 16), y), Color(tint, 0.5 - i * 0.08), 4 - i * 0.5)
 	if attack_left > 0 and not cast:
 		var progress = 1.0 - attack_left / db.config.combat.melee_seconds
 		var reach = db.config.combat.melee_range * 0.62
 		var center = Vector2(0, -40)
 		var base = aim.angle()
 		var sweep = -1.3 + progress * 2.6
-		var color = Color(actor.color, 0.9 * (1.0 - progress * 0.6))
-		draw_arc(center, reach, base - 1.25, base + sweep, 20, color, 7, true)
-		draw_arc(center, reach - 9, base - 1.0, base + sweep * 0.9, 20, Color(1, 1, 1, 0.75 * (1.0 - progress)), 3, true)
+		var fade = 1.0 - progress * 0.7
+		fx.draw_arc(center, reach, base - 1.25, base + sweep, 24, Color(tint, 0.55 * fade), 12, true)
+		fx.draw_arc(center, reach + 2, base - 1.1, base + sweep, 24, Color(Style.CREAM, 0.9 * fade), 3, true)
+		fx.draw_arc(center, reach - 10, base - 0.9, base + sweep * 0.9, 24, Color(tint, 0.35 * fade), 4, true)
 	if focus_left > 0:
 		var ratio = focus_left / db.config.combat.focus_seconds
-		draw_arc(Vector2(0, -40), 44, -PI / 2, -PI / 2 + TAU * ratio, 32, Color("fff3a6"), 3, true)
-		for i in range(5):
-			var angle = clock * 3 + i * TAU / 5
-			draw_circle(Vector2(cos(angle) * 30, -40 + sin(angle) * 30 - ratio * 12), 2.5, Color(1, 0.95, 0.7, ratio))
+		fx.draw_arc(Vector2(0, -40), 46, -PI / 2, -PI / 2 + TAU * ratio, 40, Color(1, 0.9, 0.6, 0.9), 3, true)
+		for i in range(6):
+			var angle = clock * 2.6 + i * TAU / 6
+			fx.draw_circle(Vector2(cos(angle) * 32, -40 + sin(angle) * 32 - ratio * 14), 2.5, Color(1, 0.95, 0.75, ratio))

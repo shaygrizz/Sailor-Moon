@@ -30,6 +30,7 @@ static func spawn(parent: Node, at: Vector2, tint: Color, count: int = 10, speed
 	burst.gravity = fall
 	burst.ring = ring_size
 	burst.z_index = 5
+	burst.material = preload("res://scripts/action/style.gd").additive()
 	for i in range(count):
 		var angle = randf() * TAU
 		if direction != Vector2.ZERO: angle = direction.angle() + randf_range(-0.7, 0.7)

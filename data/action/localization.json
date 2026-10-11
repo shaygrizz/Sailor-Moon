@@ -272,7 +272,9 @@
     "Поднимайся, Сейлор Мун…": "Rise again, Sailor Moon…",
     "Недостаточно энергии — бейте врагов, чтобы её накопить": "Not enough energy — strike foes to build it",
     "Морга в ярости!": "Morga is enraged!",
-    "W — отдохнуть": "W — rest"
+    "W — отдохнуть": "W — rest",
+    "«Во имя Луны я покараю тебя!»": "“In the name of the Moon, I will punish you!”",
+    "Морга": "Morga"
   },
   "it": {
     "НАЧАТЬ ИГРУ": "NUOVA PARTITA",
@@ -547,6 +549,8 @@
     "Поднимайся, Сейлор Мун…": "Rialzati, Sailor Moon…",
     "Недостаточно энергии — бейте врагов, чтобы её накопить": "Energia insufficiente — colpisci i nemici per accumularla",
     "Морга в ярости!": "Morga è furiosa!",
-    "W — отдохнуть": "W — riposa"
+    "W — отдохнуть": "W — riposa",
+    "«Во имя Луны я покараю тебя!»": "«In nome della Luna, ti punirò!»",
+    "Морга": "Morga"
   }
 }

@@ -9,6 +9,9 @@ const Enemy = preload("res://scripts/action/enemy.gd")
 const Projectile = preload("res://scripts/action/projectile.gd")
 const Atlas = preload("res://scripts/action/atlas.gd")
 const Burst = preload("res://scripts/action/burst.gd")
+const Style = preload("res://scripts/action/style.gd")
+const Terrain = preload("res://scripts/action/terrain.gd")
+const Atmosphere = preload("res://scripts/action/atmosphere.gd")
 var db
 var definition: Dictionary
 var player
@@ -33,6 +36,8 @@ var hitstop_token: int = 0
 var rest_hint: bool = false
 var tips_shown: Dictionary = {}
 var translator: Callable
+var atmosphere
+var glow_layer: Node2D
 
 func setup(database, mode: String, character_id: String, snapshot: Dictionary = {}) -> void:
 	db = database
@@ -41,7 +46,7 @@ func setup(database, mode: String, character_id: String, snapshot: Dictionary = 
 	background = load(definition.background)
 	if ResourceLoader.exists("res://assets/sprites/yoma_luna.png"):
 		luna = Atlas.region({"sheet": "res://assets/sprites/yoma_luna.png", "columns": 4, "rows": 2, "row": 1, "y_start": 900, "cell_height": 280}, 0)
-	_build_background()
+	var parallax = _build_background()
 	for rect in definition.platforms:
 		var body = StaticBody2D.new()
 		body.collision_layer = 1
@@ -53,6 +58,18 @@ func setup(database, mode: String, character_id: String, snapshot: Dictionary = 
 		body.add_child(collider)
 		add_child(body)
 	for rect in definition.get("hazards", []): hazards.append(Rect2(rect[0], rect[1], rect[2], rect[3]))
+	var terrain = Terrain.new()
+	terrain.z_index = -1
+	add_child(terrain)
+	terrain.build(definition, hazards)
+	atmosphere = Atmosphere.new()
+	add_child(atmosphere)
+	atmosphere.build(self, parallax, background.get_size())
+	glow_layer = Node2D.new()
+	glow_layer.material = Style.additive()
+	glow_layer.z_index = 4
+	glow_layer.draw.connect(_draw_glow)
+	add_child(glow_layer)
 	player = Player.new()
 	player.configure(db, character_id, practice)
 	var spawn = snapshot.get("position", definition.spawn)
@@ -98,13 +115,14 @@ func setup(database, mode: String, character_id: String, snapshot: Dictionary = 
 			feedback.emit("phase"))
 
 ## Far city art scrolls slower than the street, so the level reads with depth.
-func _build_background() -> void:
+func _build_background() -> Parallax2D:
 	var parallax = Parallax2D.new()
-	parallax.scroll_scale = Vector2(0.45, 1)
+	# Slow enough that one level never shows more than one seam; a sakura tree hides it.
+	parallax.scroll_scale = Vector2(0.28, 1)
 	parallax.repeat_size = Vector2(2560, 0)
 	parallax.repeat_times = 2
 	parallax.z_index = -10
-	# The art is not seamless, so every second copy is mirrored and the edges always match.
+	# The art is not seamless, so the second copy is mirrored and the edges always match.
 	for i in range(2):
 		var art = Sprite2D.new()
 		art.texture = background
@@ -114,6 +132,7 @@ func _build_background() -> void:
 		art.scale = Vector2(1280.0 / background.get_width(), 720.0 / background.get_height())
 		parallax.add_child(art)
 	add_child(parallax)
+	return parallax
 
 func _spawn_enemy(at: Vector2, kind: String):
 	var enemy = Enemy.new()
@@ -195,6 +214,7 @@ func _physics_process(delta: float) -> void:
 	camera.position = player.position + look
 	shake = move_toward(shake, 0, delta * 25)
 	camera.offset = Vector2(sin(clock * 111), cos(clock * 83)) * shake
+	atmosphere.follow(camera.get_screen_center_position())
 	for i in range(definition.pickups.size()):
 		var point = Vector2(definition.pickups[i][0], definition.pickups[i][1])
 		if not collected.has(str(i)) and player.position.distance_to(point + Vector2(0, 42)) < 58:
@@ -242,6 +262,7 @@ func _physics_process(delta: float) -> void:
 		finished = true
 		completed.emit()
 	queue_redraw()
+	glow_layer.queue_redraw()
 
 func _cast(id: String, origin: Vector2, direction: int) -> void:
 	if projectiles.size() >= db.config.combat.effect_budget: return
@@ -309,56 +330,66 @@ func snapshot(mode: String) -> Dictionary:
 func _draw() -> void:
 	if definition.is_empty(): return
 	var ground_y: float = definition.ground_y
-	for hazard in hazards:
-		if hazard.end.y >= definition.size[1] - 1:
-			draw_rect(Rect2(hazard.position.x, ground_y, hazard.size.x, definition.size[1] - ground_y), Color("07050d"))
-			for i in range(6): draw_rect(Rect2(hazard.position.x, ground_y + i * 8, hazard.size.x, 8), Color(0.3, 0.12, 0.35, 0.18 - i * 0.03))
-	for p in definition.platforms:
-		var rect = Rect2(p[0], p[1], p[2], p[3])
-		if rect.size.y >= 100:
-			draw_rect(rect, Color("1b1629"))
-			draw_rect(Rect2(rect.position, Vector2(rect.size.x, 12)), Color("5d4a70"))
-			draw_rect(Rect2(rect.position, Vector2(rect.size.x, 3)), Color("d9b6d3"))
-			for row in range(4):
-				var y = rect.position.y + 20 + row * 22
-				var shift = 0 if row % 2 == 0 else 24
-				draw_line(Vector2(rect.position.x, y), Vector2(rect.end.x, y), Color("2a2240"), 2)
-				for x in range(int(rect.position.x) + shift, int(rect.end.x), 48): draw_line(Vector2(x, y), Vector2(x, y + 22), Color("2a2240"), 2)
-		else:
-			draw_rect(Rect2(rect.position + Vector2(4, 6), rect.size), Color(0, 0, 0, 0.35))
-			draw_rect(rect, Color("2b2442"))
-			draw_rect(Rect2(rect.position, Vector2(rect.size.x, 4)), Color("e6b8d6"))
-			for x in range(int(rect.position.x) + 12, int(rect.end.x), 24): draw_line(Vector2(x, rect.position.y + 6), Vector2(x, rect.end.y), Color("51415e"), 1)
-	for hazard in hazards:
-		var count = int(hazard.size.x / 16)
-		for i in range(count):
-			var x = hazard.position.x + i * hazard.size.x / count
-			var w = hazard.size.x / count
-			var tip = Vector2(x + w / 2, hazard.position.y)
-			draw_colored_polygon(PackedVector2Array([Vector2(x, hazard.end.y), tip, Vector2(x + w, hazard.end.y)]), Color("6e5a8a"))
-			draw_line(tip, Vector2(x + w * 0.2, hazard.end.y), Color("d7c3ef"), 1)
 	for i in range(definition.pickups.size()):
 		if collected.has(str(i)): continue
-		var at = Vector2(definition.pickups[i][0], definition.pickups[i][1] + sin(clock * 3 + i) * 5)
-		draw_circle(at, 18, Color(1, 0.72, 0.87, 0.12 + 0.06 * sin(clock * 5)))
-		draw_colored_polygon(PackedVector2Array([at + Vector2(0,-10), at + Vector2(7,0), at + Vector2(0,10), at + Vector2(-7,0)]), Color("efbde3"))
+		var at = Vector2(definition.pickups[i][0], definition.pickups[i][1] + sin(clock * 2.4 + i) * 5)
+		draw_colored_polygon(PackedVector2Array([at + Vector2(0, -13), at + Vector2(8, -2), at + Vector2(0, 13), at + Vector2(-8, -2)]), Color("f6c9e0"))
+		draw_colored_polygon(PackedVector2Array([at + Vector2(0, -13), at + Vector2(8, -2), at + Vector2(0, 1)]), Color("fff3fa"))
+		draw_colored_polygon(PackedVector2Array([at + Vector2(-8, -2), at + Vector2(0, 13), at + Vector2(0, 1)]), Color("c78fc0"))
+		var orbit = at + Vector2(cos(clock * 3 + i), sin(clock * 3 + i) * 0.4) * 16
+		draw_circle(orbit, 1.6, Style.CREAM)
 	var bench = Vector2(definition.checkpoint[0], definition.checkpoint[1] + 32)
-	var lit = Color("80e4de") if checkpoint_used else Color("ddbf8d")
-	draw_rect(Rect2(bench + Vector2(-46, -22), Vector2(92, 8)), Color("3d3150"))
-	draw_rect(Rect2(bench + Vector2(-40, -14), Vector2(8, 14)), Color("3d3150"))
-	draw_rect(Rect2(bench + Vector2(32, -14), Vector2(8, 14)), Color("3d3150"))
-	draw_circle(bench + Vector2(0, -78), 26, Color(lit, 0.12 + 0.05 * sin(clock * 2)))
-	draw_arc(bench + Vector2(0, -78), 18, 0.6, 5.0, 24, lit, 4)
+	var lit = checkpoint_used
+	draw_colored_polygon(PackedVector2Array([bench + Vector2(-44, 0), bench + Vector2(-34, -14), bench + Vector2(34, -14), bench + Vector2(44, 0)]), Color("2a2348"))
+	draw_rect(Rect2(bench + Vector2(-34, -16), Vector2(68, 3)), Color(0.95, 0.88, 0.98, 0.7))
+	for side in [-1, 1]:
+		draw_rect(Rect2(bench + Vector2(side * 24 - 5, -66), Vector2(10, 52)), Color("332b58"))
+		draw_rect(Rect2(bench + Vector2(side * 24 - 5, -66), Vector2(2, 52)), Color(0.9, 0.85, 1.0, 0.35))
+		draw_rect(Rect2(bench + Vector2(side * 24 - 8, -70), Vector2(16, 5)), Color("4b4180"))
+	draw_rect(Rect2(bench + Vector2(-32, -76), Vector2(64, 6)), Color("4b4180"))
+	Style.crescent(self, bench + Vector2(0, -98 + sin(clock * 1.6) * 3), 16, Style.GOLD if lit else Color("8f86ad"), -0.6)
 	if rest_hint:
 		var hint = translator.call("W — отдохнуть") if translator.is_valid() else "W — отдохнуть"
-		draw_string(ThemeDB.fallback_font, bench + Vector2(-90, -118), hint, HORIZONTAL_ALIGNMENT_CENTER, 180, 16, Color("fff0da"))
+		draw_string(ThemeDB.fallback_font, bench + Vector2(-90, -132), hint, HORIZONTAL_ALIGNMENT_CENTER, 180, 15, Color(Style.CREAM, 0.85))
 	if luna != null:
 		var at = Vector2(definition.luna_position[0], definition.luna_position[1])
 		draw_texture_rect(luna, Rect2(at - Vector2(32, 51), Vector2(64, 56)), false)
 	if arena_locked and boss_alive:
 		var left = float(definition.arena[0])
-		for i in range(6): draw_line(Vector2(left - 6 + i * 3, 0), Vector2(left - 6 + i * 3, ground_y), Color(1, 0.2, 0.4, 0.25 + 0.15 * sin(clock * 6 + i)), 2)
+		for i in range(5):
+			var x = left - 8 + i * 4
+			draw_line(Vector2(x, 0), Vector2(x, ground_y), Color(1, 0.45, 0.65, 0.12 + 0.1 * sin(clock * 5 + i * 1.3)), 1.5)
+
+## Everything that emits light, drawn additively above the world.
+func _draw_glow() -> void:
+	if definition.is_empty(): return
+	var ground_y: float = definition.ground_y
+	var glow = Style.glow()
+	var halo = func(at: Vector2, radius: float, tint: Color) -> void:
+		glow_layer.draw_texture_rect(glow, Rect2(at - Vector2.ONE * radius, Vector2.ONE * radius * 2), false, tint)
+	var beam = func(at: Vector2, width: float, height: float, tint: Color) -> void:
+		glow_layer.draw_texture_rect(glow, Rect2(at.x - width / 2, at.y - height, width, height * 2), false, tint)
+	for i in range(definition.pickups.size()):
+		if collected.has(str(i)): continue
+		var at = Vector2(definition.pickups[i][0], definition.pickups[i][1] + sin(clock * 2.4 + i) * 5)
+		halo.call(at, 34, Color(1, 0.6, 0.85, 0.45 + 0.12 * sin(clock * 4 + i)))
+	var bench = Vector2(definition.checkpoint[0], definition.checkpoint[1] + 32)
+	halo.call(bench + Vector2(0, -98), 46, Color(1, 0.85, 0.55, 0.5) if checkpoint_used else Color(0.6, 0.55, 0.85, 0.25))
+	if checkpoint_used: beam.call(bench + Vector2(0, -40), 70, 260, Color(0.55, 0.9, 1.0, 0.12 + 0.04 * sin(clock * 2)))
+	if is_instance_valid(player) and player.visible:
+		halo.call(player.position + Vector2(0, -40), 74, Color(Color(player.actor.color), 0.11))
+		if player.focus_left > 0: halo.call(player.position + Vector2(0, -40), 90, Color(1, 0.95, 0.65, 0.3 * player.focus_left / db.config.combat.focus_seconds))
+	for enemy in foes:
+		if not is_instance_valid(enemy) or enemy.is_queued_for_deletion(): continue
+		var center = enemy.hurtbox().get_center()
+		if enemy.telegraphing(): halo.call(center, 70 if not enemy.boss else 130, Color(1, 0.15, 0.3, 0.45 + 0.2 * sin(clock * 40)))
+		else: halo.call(center, 40 if not enemy.boss else 90, Color(0.7, 0.3, 1.0, 0.12))
+	for projectile in projectiles:
+		if not is_instance_valid(projectile) or projectile.is_queued_for_deletion(): continue
+		var tint = Color(projectile.skill.color)
+		halo.call(projectile.position, 46 if projectile.hostile else 56, Color(tint, 0.45))
+	if arena_locked and boss_alive: beam.call(Vector2(float(definition.arena[0]) - 2, ground_y / 2), 40, ground_y, Color(1, 0.3, 0.55, 0.18))
 	if not boss_alive:
-		var at = Vector2(definition.exit_x, ground_y - 64)
-		draw_circle(at, 54, Color(1, 0.8, 0.9, 0.08 + 0.04 * sin(clock * 3)))
-		draw_arc(at, 60, clock, clock + TAU * 0.85, 40, Color("ffc9e2"), 3)
+		var exit = Vector2(definition.exit_x, ground_y)
+		beam.call(exit + Vector2(0, -200), 120, 420, Color(1, 0.9, 0.95, 0.28 + 0.06 * sin(clock * 2.5)))
+		halo.call(exit + Vector2(0, -60), 90, Color(1, 0.75, 0.9, 0.4))

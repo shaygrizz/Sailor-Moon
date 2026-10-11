@@ -262,6 +262,10 @@ func take_damage(amount: float, slow: float = 0, knock: Vector2 = Vector2.ZERO) 
 		queue_free()
 
 func _draw() -> void:
+	if kind != "flyer":
+		draw_set_transform(Vector2(0, -1), 0, Vector2(1, 0.25))
+		draw_circle(Vector2.ZERO, size_value.x * 0.75, Color(0.02, 0.0, 0.08, 0.4))
+		draw_set_transform(Vector2.ZERO)
 	var white = flash_left > 0
 	var glow = state == "windup"
 	if sprite == null:
@@ -292,7 +296,7 @@ func _draw() -> void:
 		var top = -size_value.y - 26
 		draw_colored_polygon(PackedVector2Array([Vector2(-6, top - 14), Vector2(6, top - 14), Vector2(2, top), Vector2(-2, top)]), Color("ff3a64"))
 		draw_circle(Vector2(0, top + 6), 3, Color("ff3a64"))
-	if hp < max_hp or boss:
+	if hp < max_hp and not boss:
 		var width_value = 120 if boss else 46
 		var y = -size_value.y - (70 if boss else 12)
 		if use_beryl: y = -SnesAtlas.definition("beryl").canvas[1] - 10.0

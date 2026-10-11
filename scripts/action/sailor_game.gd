@@ -93,7 +93,7 @@ func _process(delta: float) -> void:
 			for path in loading_paths: ResourceLoader.load_threaded_get(path)
 			_finish_start()
 	elif is_instance_valid(level):
-		ui.update_hud(level.player, level.boss_alive)
+		ui.update_hud(level.player, level.boss_alive, level.boss if level.arena_locked else null)
 
 func _finish_start() -> void:
 	mode = pending.mode
